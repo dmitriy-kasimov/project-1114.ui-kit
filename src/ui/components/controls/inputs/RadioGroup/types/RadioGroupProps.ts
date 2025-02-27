@@ -1,6 +1,6 @@
 import { RadioGroupOptionType } from '../components/RadioGroupOption/types/RadioGroupOptionProps'
 
-export interface RadioGroupProps<T extends string> {
+export interface RadioGroupProps<T extends string | number> {
     name: string
     onChange: (value: string) => void
     options: RadioGroupOptionType<T>[]

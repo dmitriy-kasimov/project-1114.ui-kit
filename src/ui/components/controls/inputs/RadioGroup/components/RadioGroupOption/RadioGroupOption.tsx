@@ -6,7 +6,7 @@ import cls from './RadioGroupOption.module.scss'
 import { HStack } from 'ui/components/shared/Stack'
 import { classNames } from 'lib/classNames/classNames'
 
-function RadioGroupOption<T extends string>(props: RadioGroupOptionProps<T>) {
+function RadioGroupOption<T extends string | number>(props: RadioGroupOptionProps<T>) {
     const { item, onChange, id, name } = props
 
     const mods: Record<string, boolean> = {

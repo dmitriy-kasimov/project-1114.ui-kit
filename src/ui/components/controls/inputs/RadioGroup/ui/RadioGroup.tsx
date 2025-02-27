@@ -6,7 +6,7 @@ import cls from './RadioGroup.module.scss'
 import { classNames } from 'lib/classNames/classNames'
 import { VStack } from 'ui/components/shared/Stack'
 
-function RadioGroup<T extends string>(props: RadioGroupProps<T>) {
+function RadioGroup<T extends string | number>(props: RadioGroupProps<T>) {
     const { onChange, options, disabled = false, className = '', name } = props
 
     const mods: Record<string, boolean> = {
@@ -17,7 +17,7 @@ function RadioGroup<T extends string>(props: RadioGroupProps<T>) {
             {options?.map(option => (
                 <RadioGroupOption<T>
                     key={option.value}
-                    id={option.value}
+                    id={option.description}
                     item={option}
                     name={name}
                     onChange={onChange}

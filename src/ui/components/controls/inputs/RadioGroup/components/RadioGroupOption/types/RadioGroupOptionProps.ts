@@ -1,4 +1,4 @@
-export type RadioGroupOptionType<T extends string> = {
+export type RadioGroupOptionType<T extends string | number> = {
     value: T
     description: string
 
@@ -6,7 +6,7 @@ export type RadioGroupOptionType<T extends string> = {
     defaultChecked?: boolean
 }
 
-export interface RadioGroupOptionProps<T extends string> {
+export interface RadioGroupOptionProps<T extends string | number> {
     id: string
     name: string
 

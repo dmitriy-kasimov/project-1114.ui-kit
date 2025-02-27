@@ -1,35 +1,33 @@
 {
     "compilerOptions": {
-      "target": "es5",
-      "module": "ESNext",
-      "jsx": "react",
-      //обработка js файлов
-      "allowJs": true,
-      "moduleResolution": "node",
-      "strict": true,
-      "lib": ["es2015", "dom"],
-      "outDir": "./build/esm",
-      "declarationDir": "./build/types",
-      "sourceMap": true,
-      "declaration": true,
-      "baseUrl":".",
-      "paths": {
-          "*": ["./src/*"]
-      },
-      //Замена common.js на import/export
-      "esModuleInterop": true,
-      //Поддержка export default
-      "allowSyntheticDefaultImports": true,
-      "isolatedModules": true
+        "target": "es5",
+        "module": "ESNext",
+        "jsx": "react",
+        //обработка js файлов
+        "allowJs": true,
+        "moduleResolution": "node",
+        "strict": true,
+        "lib": ["es2015", "dom"],
+        "outDir": "./build/esm",
+        "declarationDir": "./build/types",
+        "sourceMap": true,
+        "declaration": true,
+        "baseUrl": ".",
+        "paths": {
+            "*": ["./src/*"]
+        },
+        //Замена common.js на import/export
+        "esModuleInterop": true,
+        //Поддержка export default
+        "allowSyntheticDefaultImports": true,
+        "isolatedModules": true,
+        "skipLibCheck": true
     },
     "ts-node": {
-      "compilerOptions": {
-        "module": "CommonJS"
-      }
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
     },
-    "include": [
-      "./src/**/*.ts",
-      "./src/**/*.tsx",
-    ],
+    "include": ["./src/**/*.ts", "./src/**/*.tsx"],
     "exclude": ["node_modules", "build", "./src/stories"]
 }
