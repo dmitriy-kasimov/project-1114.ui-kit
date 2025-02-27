@@ -10,7 +10,7 @@ import {
     RadioGroup
 } from '@project-1114/ui-kit'
 
-const radioGroupOptions: RadioGroupOptionType[] = [
+const radioGroupOptions: RadioGroupOptionType<string>[] = [
     {value: 'admin', description: 'Администратор'},
     {value: 'architecturer', description: 'Архитектор', defaultChecked: true},
     {value: 'root', description: 'root', disabled:true},
