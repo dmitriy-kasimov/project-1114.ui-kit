@@ -1,30 +1,23 @@
-
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react'
 
 import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
-import { Slider } from '../index';
+import { Slider } from '../index'
 
 const meta: Meta<typeof Slider> = {
     title: 'components/controls/Slider',
     component: Slider,
-    decorators: [
-        (Story) => (
-          decoratorBackground(Story)
-        )
-      ],
+    decorators: [Story => decoratorBackground(Story)],
     parameters: {
-        layout: 'centered',
+        layout: 'centered'
     },
 
     tags: ['autodocs'],
-    argTypes: {
+    argTypes: {}
+}
 
-    },
-};
-
-export default meta;
-type Story = StoryObj<typeof Slider>;
+export default meta
+type Story = StoryObj<typeof Slider>
 
 export const SliderDefault: Story = {
     args: {
@@ -33,8 +26,19 @@ export const SliderDefault: Story = {
         min: 0,
         max: 10,
         step: 1
-    },
-};
+    }
+}
+
+export const SliderWithoutValue: Story = {
+    args: {
+        value: 5,
+        onChange: () => {},
+        min: 0,
+        max: 10,
+        step: 1,
+        showValue: false
+    }
+}
 
 export const SliderDisabled: Story = {
     args: {
@@ -44,5 +48,5 @@ export const SliderDisabled: Story = {
         min: 0,
         max: 10,
         step: 1
-    },
-};
+    }
+}
