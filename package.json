@@ -1,6 +1,6 @@
 {
     "name": "@project-1114/ui-kit",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "ui-kit for project-1114",
     "main": "./build/esm/index.js",
     "types": "./build/types/src",

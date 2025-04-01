@@ -29,6 +29,7 @@ export { Icon } from './ui/components/shared/Icon'
 export { Skeleton } from './ui/components/shared/Skeleton'
 export { HStack, VStack } from './ui/components/shared/Stack'
 export { Text } from './ui/components/shared/Text'
+export { Tooltip } from './ui/components/shared/Tooltip'
 
 // widgets
 export { ProgressBar } from './ui/widgets/ProgressBar'
