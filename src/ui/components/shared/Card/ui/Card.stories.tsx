@@ -37,37 +37,16 @@ export const VariantOutlined: Story = {
     }
 }
 
-export const BorderNormal: Story = {
+export const WithoutPadding: Story = {
     args: {
-        border: 'normal',
-        children
-    }
-}
-
-export const BorderRound: Story = {
-    args: {
-        border: 'round',
-        children
-    }
-}
-
-export const WithoutPaddings: Story = {
-    args: {
+        padding: '0',
         children
     }
 }
 
 export const PaddingXL: Story = {
     args: {
-        contentMargin: 'xl',
-        children
-    }
-}
-
-export const Overflowed: Story = {
-    args: {
-        maxHeight: '200px',
-        maxWidth: '200px',
+        padding: 'xl',
         children
     }
 }

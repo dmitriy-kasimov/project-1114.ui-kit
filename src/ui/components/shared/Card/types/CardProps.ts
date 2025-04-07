@@ -1,22 +1,15 @@
 import { HTMLAttributes, ReactNode } from 'react'
 
-export type CardVariant = 'filled' | 'outlined'
-export type CardContentMargin = '0' | 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl'
-export type CardBorder = 'round' | 'normal'
+export type TCardVariant = 'filled' | 'outlined'
+export type TCardPadding = '0' | 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl'
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
     className?: string
     children: ReactNode
 
-    variant?: CardVariant
-    contentMargin?: CardContentMargin
-    border?: CardBorder
+    variant?: TCardVariant
+    padding?: TCardPadding
 
     fullWidth?: boolean
     fullHeight?: boolean
-
-    minWidth?: string
-    maxWidth?: string
-    minHeight?: string
-    maxHeight?: string
 }

@@ -1,19 +1,19 @@
-import React from 'react';
+import React from 'react'
 
-import { memo } from 'react';
-import { classNames } from 'lib/classNames/classNames';
-import cls from './Card.module.scss';
-import { CardContentMargin, CardProps } from '../types/CardProps';
+import { memo } from 'react'
+import { Mods, classNames } from 'lib/classNames/classNames'
+import cls from './Card.module.scss'
+import { CardProps, TCardPadding } from '../types/CardProps'
 
-const mapMarginToClass: Record<CardContentMargin, string> = {
-    '0': 'margin_0',
-    'xxs': 'margin_xxs',
-    'xs': 'margin_xs',
-    's': 'margin_s',
-    'm': 'margin_m',
-    'l': 'margin_l',
-    'xl': 'margin_xl',
-};
+const mapPadding: Record<TCardPadding, string> = {
+    '0': 'padding_0',
+    xxs: 'padding_xxs',
+    xs: 'padding_xs',
+    s: 'padding_s',
+    m: 'padding_m',
+    l: 'padding_l',
+    xl: 'padding_xl'
+}
 
 export const Card = memo((props: CardProps) => {
     const {
@@ -22,38 +22,19 @@ export const Card = memo((props: CardProps) => {
         variant = 'normal',
         fullWidth = false,
         fullHeight = false,
-        contentMargin = 'xs',
-        border = 'normal',
-        minWidth,
-        maxWidth,
-        minHeight,
-        maxHeight,
+        padding = 'xs',
         ...otherProps
-    } = props;
+    } = props
 
-    const marginClass = mapMarginToClass[contentMargin];
+    const mods: Mods = {
+        [cls.fullWidth]: fullWidth,
+        [cls.fullHeight]: fullHeight
+    }
+    const addons = [cls[variant], cls[mapPadding[padding]], className]
 
     return (
-        <div
-            className={classNames(
-                cls.CardLayout,
-                { [cls.fullWidth]: fullWidth, [cls.fullHeight]: fullHeight },
-                [className, cls[variant], cls[border]],
-            )}
-
-            {...otherProps}
-        >
-            <div
-                className={classNames(cls.Card, {}, [cls[marginClass]])}
-                style={{
-                     minWidth: minWidth,
-                     maxWidth: maxWidth,
-                     minHeight: minHeight,
-                     maxHeight: maxHeight
-            }}
-            >
-                {children}
-            </div>
+        <div className={classNames(cls.Card, mods, addons)} {...otherProps}>
+            {children}
         </div>
-    );
-});
+    )
+})
