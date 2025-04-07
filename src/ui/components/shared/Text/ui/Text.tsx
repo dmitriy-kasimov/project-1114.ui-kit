@@ -1,25 +1,60 @@
-import React, {FC, memo} from "react";
-import { TextProps } from "../types/TextProps";
-import cls from'./styles/Text.module.scss'
-import { classNames } from "lib/classNames/classNames";
+import React from 'react'
+import { ElementType, ReactNode } from 'react'
+import cls from './styles/Text.module.scss'
+import {
+    TAvailableSectionTypes,
+    TTextAlign,
+    TTextColor,
+    TTextSize,
+    TTextWeight,
+    TWhiteSpace
+} from '../model/types'
+import { classNames } from 'lib/classNames/classNames'
+import { mappedTextWeights } from '../const/mappedTextWeights'
 
-export const Text: FC<TextProps> = memo((props) => {
+type TextProps<T> = {
+    size?: TTextSize
+    color?: TTextColor
+    align?: TTextAlign
+    weight?: TTextWeight
+
+    bold?: boolean
+    whiteSpace?: TWhiteSpace
+
+    className?: string
+
+    children: ReactNode
+
+    as?: T
+}
+
+export const Text = <T extends ElementType>(
+    props: TextProps<T extends TAvailableSectionTypes ? T : 'span'>
+) => {
     const {
-        color='main',  
-        size='m', 
-        className='',
-        bold=false,
-
+        color = 'light',
+        size = 'm',
+        align = 'left',
+        weight = '400',
+        className = '',
+        whiteSpace = 'wrap',
         children,
-    } = props;
+        as
+    } = props
 
+    const Tag = as || 'span'
     return (
-        <span className={classNames(cls.Text, {[cls.bold]: bold}, [
-            cls[size], 
-            cls[color], 
-            className
-        ])}>
+        <Tag
+            className={classNames(cls.Text, {}, [
+                cls[size],
+                cls[color],
+                cls[align],
+                cls[mappedTextWeights[weight]],
+                cls[whiteSpace],
+                className
+            ])}
+        >
             {children}
-        </span>
+        </Tag>
     )
-});
+}

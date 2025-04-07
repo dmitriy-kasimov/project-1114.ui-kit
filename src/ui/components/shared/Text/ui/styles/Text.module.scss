@@ -1,6 +1,5 @@
 @use '../styles/classes/text_size';
 @use '../styles/classes/text_color';
-
-.bold {
-    font-weight: 700;
-}
+@use '../styles/classes/text_align';
+@use '../styles/classes/text_weight';
+@use '../styles/classes/text_white_spaces';
