@@ -16,13 +16,6 @@
 
     &:hover {
         @include controls.hover;
-
-        // TODO
-        .addonLeft svg,
-        .addonRight svg {
-            color: green;
-            fill: green;
-        }
     }
 
     &:active {
@@ -53,46 +46,110 @@
     border: none;
 }
 
-.cancel {
-    background: var(--uikit-button-bg-cancel);
-}
-
-.accept {
-    background: var(--uikit-button-bg-accept);
-}
-
 .fullWidth {
     width: 100%;
 }
 
-.square {
-    padding: 0;
+// вертикальные отступы
+
+.vertical-padding-0 {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
-.padding_0 {
-    padding: 0 var(--uikit-padding-xxs);
+.vertical-padding-xxs {
+    padding-top: var(--uikit-padding-xxs);
+    padding-bottom: var(--uikit-padding-xxs);
 }
 
-.padding_xxs {
-    padding: var(--uikit-padding-xxs) var(--uikit-padding-xs);
+.vertical-padding-xs {
+    padding-top: var(--uikit-padding-xs);
+    padding-bottom: var(--uikit-padding-xs);
 }
 
-.padding_xs {
-    padding: var(--uikit-padding-xs) var(--uikit-padding-s);
+.vertical-padding-s {
+    padding-top: var(--uikit-padding-s);
+    padding-bottom: var(--uikit-padding-s);
 }
 
-.padding_s {
-    padding: var(--uikit-padding-s) var(--uikit-padding-m);
+.vertical-padding-m {
+    padding-top: var(--uikit-padding-m);
+    padding-bottom: var(--uikit-padding-m);
 }
 
-.padding_m {
-    padding: var(--uikit-padding-m) var(--uikit-padding-l);
+.vertical-padding-l {
+    padding-top: var(--uikit-padding-l);
+    padding-bottom: var(--uikit-padding-l);
 }
 
-.padding_l {
-    padding: var(--uikit-padding-l) var(--uikit-padding-xl);
+.vertical-padding-xl {
+    padding-top: var(--uikit-padding-xl);
+    padding-bottom: var(--uikit-padding-xl);
 }
 
-.padding_xl {
-    padding: var(--uikit-padding-xl) var(--uikit-padding-xl);
+// горизонтальные отступы
+
+.horizontal-padding-0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.horizontal-padding-xxs {
+    padding-left: var(--uikit-padding-xxs);
+    padding-right: var(--uikit-padding-xxs);
+}
+
+.horizontal-padding-xs {
+    padding-left: var(--uikit-padding-xs);
+    padding-right: var(--uikit-padding-xs);
+}
+
+.horizontal-padding-s {
+    padding-left: var(--uikit-padding-s);
+    padding-right: var(--uikit-padding-s);
+}
+
+.horizontal-padding-m {
+    padding-left: var(--uikit-padding-m);
+    padding-right: var(--uikit-padding-m);
+}
+
+.horizontal-padding-l {
+    padding-left: var(--uikit-padding-l);
+    padding-right: var(--uikit-padding-l);
+}
+
+.horizontal-padding-xl {
+    padding-left: var(--uikit-padding-xl);
+    padding-right: var(--uikit-padding-xl);
+}
+
+// border-radius
+
+.border-radius-0 {
+    border-radius: var(--uikit-border-radius-0);
+}
+
+.border-radius-xxs {
+    border-radius: var(--uikit-border-radius-xxs);
+}
+
+.border-radius-xs {
+    border-radius: var(--uikit-border-radius-xs);
+}
+
+.border-radius-s {
+    border-radius: var(--uikit-border-radius-s);
+}
+
+.border-radius-m {
+    border-radius: var(--uikit-border-radius-m);
+}
+
+.border-radius-l {
+    border-radius: var(--uikit-border-radius-l);
+}
+
+.border-radius-xl {
+    border-radius: var(--uikit-border-radius-xl);
 }

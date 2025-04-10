@@ -1,51 +1,51 @@
-import React, {FC, ForwardedRef, forwardRef} from "react";
+import React, { FC, ForwardedRef, forwardRef } from 'react'
 import cls from './Button.module.scss'
-import { ButtonPadding, ButtonProps } from "../types/ButtonProps";
-import { Mods, classNames } from "lib/classNames/classNames";
-
-const mapPaddingToClass: Record<ButtonPadding, string> = {
-    '0': 'padding_0',
-    'xxs': 'padding_xxs',
-    'xs': 'padding_xs',
-    's': 'padding_s',
-    'm': 'padding_m',
-    'l': 'padding_l',
-    'xl': 'padding_xl',
-};
+import { ButtonProps, mapBorderRadius, mapHPaddings, mapVPaddings } from '../types/ButtonProps'
+import { Mods, classNames } from 'lib/classNames/classNames'
+import { HStack } from 'ui/components/shared/Stack'
 
 export const Button: FC<ButtonProps> = forwardRef((props, ref: ForwardedRef<HTMLButtonElement>) => {
     const {
         children,
-        square=false,
-        disabled=false,
+        disabled = false,
         variant = 'primary',
         fullWidth = false,
         className = '',
         addonLeft,
         addonRight,
-        padding = 's',
+        paddingV = 's',
+        paddingH = 'm',
+        borderRadius = 'xs',
+        gap = 'm',
         ...otherProps
-    } = props;
+    } = props
 
     const mods: Mods = {
         [cls.fullWidth]: fullWidth,
         [cls.disabled]: disabled,
-        [cls.square]: square,
-        [cls.withAddon]: Boolean(addonLeft) || Boolean(addonRight),
+        [cls.withAddon]: Boolean(addonLeft) || Boolean(addonRight)
     }
 
-    const paddingClass = mapPaddingToClass[padding];
+    const addons = [
+        cls[variant],
+        cls[mapVPaddings[paddingV]],
+        cls[mapHPaddings[paddingH]],
+        cls[mapBorderRadius[borderRadius]],
+        className
+    ]
 
-    return(
-        <button 
-            className={ classNames(cls.Button, mods, [className, cls[variant], cls[paddingClass]])}
-            type="button"
+    return (
+        <button
+            className={classNames(cls.Button, mods, addons)}
+            type='button'
             {...otherProps}
             ref={ref}
         >
-            <div className={cls.addonLeft}>{addonLeft}</div>
-            {children}
-            <div className={cls.addonRight}>{addonRight}</div>
+            <HStack align={'center'} gap={gap}>
+                {addonLeft}
+                {children}
+                {addonRight}
+            </HStack>
         </button>
     )
-});
+})
