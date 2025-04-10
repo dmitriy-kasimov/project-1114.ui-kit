@@ -10,7 +10,7 @@
         left: 50%;
         transform: translateX(-50%);
         padding: 6px;
-        background: white;
+        background: var(--uikit-widgets-bg-color);
         box-shadow: 0 0 10px 0 #00000040;
         font-size: 14px;
         font-family: sans-serif;
@@ -35,12 +35,6 @@
     /* Absolute positioning */
     .top {
         top: calc(40px * -1);
-
-        /* CSS border triangles */
-        &::before {
-            top: 100%;
-            border-top-color: white;
-        }
     }
 
     /* Absolute positioning */
@@ -48,25 +42,11 @@
         left: calc(100% + 40px);
         top: 50%;
         transform: translateX(0) translateY(-50%);
-
-        /* CSS border triangles */
-        &::before {
-            left: calc(6px * -1);
-            top: 50%;
-            transform: translateX(0) translateY(-50%);
-            border-right-color: white;
-        }
     }
 
     /* Absolute positioning */
     .bottom {
         bottom: calc(40px * -1);
-
-        /* CSS border triangles */
-        &::before {
-            bottom: 100%;
-            border-bottom-color: white;
-        }
     }
 
     /* Absolute positioning */

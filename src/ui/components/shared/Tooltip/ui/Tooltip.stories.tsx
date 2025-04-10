@@ -21,6 +21,6 @@ type Story = StoryObj<typeof Tooltip>
 export const Normal: Story = {
     args: {
         children: <div style={{ background: 'black', padding: '0.5rem' }}>Hover on me</div>,
-        content: <Text color={'secondary'}>Tooltip content</Text>
+        content: <Text>Tooltip content</Text>
     }
 }
