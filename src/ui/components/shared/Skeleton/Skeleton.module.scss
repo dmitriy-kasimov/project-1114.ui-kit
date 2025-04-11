@@ -5,7 +5,7 @@
     box-shadow: 0 2px 10px 0 var(--uikit-widgets-items-bg-color);
     background: var(--uikit-widgets-items-bg);
     overflow: hidden;
-    border-radius: var(--uikit-border-radius);
+    border-radius: var(--uikit-border-radius-s);
 
     &::before {
         content: '';

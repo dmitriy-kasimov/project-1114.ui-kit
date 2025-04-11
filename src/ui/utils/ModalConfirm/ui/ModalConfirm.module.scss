@@ -18,7 +18,7 @@
     @include anims.util;
 
     background: var(--uikit-utils-bg);
-    border-radius: var(--uikit-border-radius);
+    border-radius: var(--uikit-border-radius-s);
     max-width: 60%;
     z-index: var(--uikit-utils-modal-z-index);
     padding: var(--uikit-indent-s);

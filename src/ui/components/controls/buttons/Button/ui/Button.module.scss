@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     padding: var(--uikit-indent-s) var(--uikit-indent-m);
-    border-radius: var(--uikit-border-radius);
+    border-radius: var(--uikit-border-radius-s);
     outline: none;
     border: none;
     text-decoration: none;
@@ -37,7 +37,7 @@
 }
 
 .outline {
-    border: var(--uikit-button-border);
+    border: 1px solid var(--uikit-button-border-color);
     background: transparent;
 }
 

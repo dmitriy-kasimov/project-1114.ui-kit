@@ -3,17 +3,7 @@ import React from 'react'
 import { memo } from 'react'
 import { Mods, classNames } from 'lib/classNames/classNames'
 import cls from './Card.module.scss'
-import { CardProps, TCardPadding } from '../types/CardProps'
-
-const mapPadding: Record<TCardPadding, string> = {
-    '0': 'padding_0',
-    xxs: 'padding_xxs',
-    xs: 'padding_xs',
-    s: 'padding_s',
-    m: 'padding_m',
-    l: 'padding_l',
-    xl: 'padding_xl'
-}
+import { CardProps, mapPadding } from '../types/CardProps'
 
 export const Card = memo((props: CardProps) => {
     const {

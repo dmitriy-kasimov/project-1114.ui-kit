@@ -3,7 +3,7 @@
 ::-webkit-scrollbar {
     @include controls.default-styles;
 
-    border-radius: var(--uikit-border-radius);
+    border-radius: var(--uikit-border-radius-s);
     border: none;
     width: 0.5rem;
     height: 0.5rem;
@@ -11,13 +11,13 @@
 
 ::-webkit-scrollbar-track {
     background-color: var(--uikit-controls-bg-color);
-    border-radius: var(--uikit-border-radius);
+    border-radius: var(--uikit-border-radius-s);
 }
 
 ::-webkit-scrollbar-thumb {
     @include controls.default-styles;
 
-    border-radius: var(--uikit-border-radius);
+    border-radius: var(--uikit-border-radius-s);
     background-color: var(--uikit-theme-main-color);
 }
 

@@ -1,9 +1,8 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react'
+import { TIndent } from 'types/TIndent'
+import { TBorder } from 'types/TBorder'
 
 export type TButtonVariant = 'primary' | 'outline' | 'clear'
-export type TButtonPadding = '0' | 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl'
-export type TButtonBorderRadius = '0' | 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl'
-export type TButtonGap = '0' | 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode
@@ -15,13 +14,13 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     addonLeft?: ReactNode
     addonRight?: ReactNode
 
-    paddingV?: TButtonPadding
-    paddingH?: TButtonPadding
-    borderRadius?: TButtonBorderRadius
-    gap?: TButtonGap
+    paddingV?: TIndent
+    paddingH?: TIndent
+    borderRadius?: TBorder
+    gap?: TIndent
 }
 
-export const mapVPaddings: Record<TButtonPadding, string> = {
+export const mapVPaddings: Record<TIndent, string> = {
     '0': 'vertical-padding-0',
     xxs: 'vertical-padding-xxs',
     xs: 'vertical-padding-xs',
@@ -31,7 +30,7 @@ export const mapVPaddings: Record<TButtonPadding, string> = {
     xl: 'vertical-padding-xl'
 }
 
-export const mapHPaddings: Record<TButtonPadding, string> = {
+export const mapHPaddings: Record<TIndent, string> = {
     '0': 'horizontal-padding-0',
     xxs: 'horizontal-padding-xxs',
     xs: 'horizontal-padding-xs',
@@ -41,7 +40,7 @@ export const mapHPaddings: Record<TButtonPadding, string> = {
     xl: 'horizontal-padding-xl'
 }
 
-export const mapBorderRadius: Record<TButtonBorderRadius, string> = {
+export const mapBorderRadius: Record<TBorder, string> = {
     '0': 'border-radius-0',
     xxs: 'border-radius-xxs',
     xs: 'border-radius-xs',

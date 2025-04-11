@@ -2,11 +2,11 @@ import React from 'react'
 import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react'
 import { Mods, classNames } from 'lib/classNames/classNames'
 import cls from './Flex.module.scss'
+import { TIndent } from 'types/TIndent'
 
 export type FlexJustify = 'start' | 'center' | 'end' | 'between'
 export type FlexAlign = 'start' | 'center' | 'end'
 export type FlexDirection = 'row' | 'column' | 'column-reverse'
-export type FlexGap = '0' | 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'
 
 const justifyClasses: Record<FlexJustify, string> = {
     start: cls.justifyStart,
@@ -27,15 +27,14 @@ const directionClasses: Record<FlexDirection, string> = {
     'column-reverse': cls.directionColumnReverse
 }
 
-const gapClasses: Record<FlexGap, string> = {
+const gapClasses: Record<TIndent, string> = {
     '0': cls.gap_0,
     xxs: cls.gap_xxs,
     xs: cls.gap_xs,
     s: cls.gap_s,
     m: cls.gap_m,
     l: cls.gap_l,
-    xl: cls.gap_xl,
-    xxl: cls.gap_xxl
+    xl: cls.gap_xl
 }
 
 type DivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
@@ -45,7 +44,7 @@ export interface FlexProps extends DivProps {
     justify?: FlexJustify
     align?: FlexAlign
     direction: FlexDirection
-    gap?: FlexGap
+    gap?: TIndent
     max?: boolean
 }
 
