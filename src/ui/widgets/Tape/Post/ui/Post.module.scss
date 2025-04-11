@@ -5,13 +5,13 @@
     border: none;
     border-radius: var(--uikit-border-radius);
     background: var(--uikit-widgets-items-bg);
-    padding: var(--uikit-padding-s);
+    padding: var(--uikit-indent-s);
 }
 
 .body {
-    padding: var(--uikit-padding-xxs);
+    padding: var(--uikit-indent-xxs);
 }
 
 .header {
-    padding: 0 var(--uikit-padding-s);
+    padding: 0 var(--uikit-indent-s);
 }

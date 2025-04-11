@@ -30,7 +30,7 @@
     content: '';
     background-repeat: no-repeat;
     background-position: center center;
-    padding: var(--uikit-padding-s);
+    padding: var(--uikit-indent-s);
 }
 
 .input:checked + .checkbox {

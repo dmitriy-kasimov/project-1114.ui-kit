@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--uikit-padding-s) var(--uikit-padding-m);
+    padding: var(--uikit-indent-s) var(--uikit-indent-m);
     border-radius: var(--uikit-border-radius);
     outline: none;
     border: none;
@@ -58,33 +58,33 @@
 }
 
 .vertical-padding-xxs {
-    padding-top: var(--uikit-padding-xxs);
-    padding-bottom: var(--uikit-padding-xxs);
+    padding-top: var(--uikit-indent-xxs);
+    padding-bottom: var(--uikit-indent-xxs);
 }
 
 .vertical-padding-xs {
-    padding-top: var(--uikit-padding-xs);
-    padding-bottom: var(--uikit-padding-xs);
+    padding-top: var(--uikit-indent-xs);
+    padding-bottom: var(--uikit-indent-xs);
 }
 
 .vertical-padding-s {
-    padding-top: var(--uikit-padding-s);
-    padding-bottom: var(--uikit-padding-s);
+    padding-top: var(--uikit-indent-s);
+    padding-bottom: var(--uikit-indent-s);
 }
 
 .vertical-padding-m {
-    padding-top: var(--uikit-padding-m);
-    padding-bottom: var(--uikit-padding-m);
+    padding-top: var(--uikit-indent-m);
+    padding-bottom: var(--uikit-indent-m);
 }
 
 .vertical-padding-l {
-    padding-top: var(--uikit-padding-l);
-    padding-bottom: var(--uikit-padding-l);
+    padding-top: var(--uikit-indent-l);
+    padding-bottom: var(--uikit-indent-l);
 }
 
 .vertical-padding-xl {
-    padding-top: var(--uikit-padding-xl);
-    padding-bottom: var(--uikit-padding-xl);
+    padding-top: var(--uikit-indent-xl);
+    padding-bottom: var(--uikit-indent-xl);
 }
 
 // горизонтальные отступы
@@ -95,33 +95,33 @@
 }
 
 .horizontal-padding-xxs {
-    padding-left: var(--uikit-padding-xxs);
-    padding-right: var(--uikit-padding-xxs);
+    padding-left: var(--uikit-indent-xxs);
+    padding-right: var(--uikit-indent-xxs);
 }
 
 .horizontal-padding-xs {
-    padding-left: var(--uikit-padding-xs);
-    padding-right: var(--uikit-padding-xs);
+    padding-left: var(--uikit-indent-xs);
+    padding-right: var(--uikit-indent-xs);
 }
 
 .horizontal-padding-s {
-    padding-left: var(--uikit-padding-s);
-    padding-right: var(--uikit-padding-s);
+    padding-left: var(--uikit-indent-s);
+    padding-right: var(--uikit-indent-s);
 }
 
 .horizontal-padding-m {
-    padding-left: var(--uikit-padding-m);
-    padding-right: var(--uikit-padding-m);
+    padding-left: var(--uikit-indent-m);
+    padding-right: var(--uikit-indent-m);
 }
 
 .horizontal-padding-l {
-    padding-left: var(--uikit-padding-l);
-    padding-right: var(--uikit-padding-l);
+    padding-left: var(--uikit-indent-l);
+    padding-right: var(--uikit-indent-l);
 }
 
 .horizontal-padding-xl {
-    padding-left: var(--uikit-padding-xl);
-    padding-right: var(--uikit-padding-xl);
+    padding-left: var(--uikit-indent-xl);
+    padding-right: var(--uikit-indent-xl);
 }
 
 // border-radius
