@@ -1,51 +1,51 @@
-import React, { FC } from 'react';
-import { Mods, classNames } from 'lib/classNames/classNames';
-import cls from './Modal.module.scss';
-import { Portal } from '../../Portal/Portal';
-import { Overlay } from '../../Overlay/Overlay';
-import { useModal } from 'lib/hooks/useModal/useModal';
-import { ANIMATION_DELAY } from 'styles/effects/anims';
-import { ModalProps } from '../types/ModalProps';
+import React, { FC } from 'react'
+import { Mods, classNames } from 'lib/classNames/classNames'
+import cls from './Modal.module.scss'
+import { Portal } from '../../Portal/Portal'
+import { Overlay } from '../../Overlay/Overlay'
+import { useModal } from 'lib/hooks/useModal/useModal'
+import { ANIMATION_DELAY } from 'styles/effects/anims'
+import { ModalProps, mapContentPadding } from '../types/ModalProps'
 
-export const Modal: FC<ModalProps> = (props) => {
+export const Modal: FC<ModalProps> = props => {
     const {
         className,
         children,
-        isOpen=true,
+        isOpen = true,
         onClose,
         lazy,
-        portalElement
-    } = props;
+        portalElement,
+        closable = true,
+        fullscreen = false,
+        padding = 's'
+    } = props
 
-    const {
-        isClosing,
-        isMounted,
-        close,
-    } = useModal({
+    const { isClosing, isMounted, close } = useModal({
         animationDelay: ANIMATION_DELAY,
         onClose,
         isOpen,
-    });
+        closable
+    })
 
     const mods: Mods = {
         [cls.opened]: isOpen,
-        [cls.isClosing]: isClosing,
-    };
+        [cls.isClosing]: isClosing
+    }
+
+    const addons = [cls[mapContentPadding[padding]]]
 
     if (lazy && !isMounted) {
-        return null;
+        return null
     }
 
     return (
         <Portal element={portalElement}>
             <div className={classNames(cls.Modal, mods, [className])}>
-                <Overlay onClick={close} type={'modal'}/>
-                <div
-                    className={cls.content}
-                >
+                <Overlay onClick={close} />
+                <div className={classNames(cls.content, { [cls.fullscreen]: fullscreen }, addons)}>
                     {children}
                 </div>
             </div>
         </Portal>
-    );
-};
+    )
+}

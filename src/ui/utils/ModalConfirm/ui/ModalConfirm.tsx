@@ -44,7 +44,7 @@ export const ModalConfirm: FC<ModalConfirmProps> = props => {
     return (
         <Portal element={portalElement}>
             <div className={classNames(cls.Modal, mods, [className])}>
-                <Overlay onClick={close} type={'modal'} />
+                <Overlay onClick={close} />
                 <div className={cls.content}>
                     <VStack gap='l'>
                         <HStack max justify='center'>

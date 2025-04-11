@@ -21,7 +21,40 @@
     border-radius: var(--uikit-border-radius);
     max-width: 60%;
     z-index: var(--uikit-utils-modal-z-index);
+}
+
+.padding-0 {
+    padding: 0;
+}
+
+.padding-xxs {
+    padding: var(--uikit-padding-xxs);
+}
+
+.padding-xs {
+    padding: var(--uikit-padding-xs);
+}
+
+.padding-s {
     padding: var(--uikit-padding-s);
+}
+
+.padding-m {
+    padding: var(--uikit-padding-m);
+}
+
+.padding-l {
+    padding: var(--uikit-padding-l);
+}
+
+.padding-xl {
+    padding: var(--uikit-padding-xl);
+}
+
+.fullscreen {
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
 }
 
 .opened {

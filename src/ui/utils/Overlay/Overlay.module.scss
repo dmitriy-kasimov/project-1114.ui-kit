@@ -1,5 +1,5 @@
 .Overlay {
-    background: var(--uikit-utils-overlay-bg);
+    background: #38405033;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,12 +9,5 @@
     right: 0;
     left: 0;
     cursor: pointer;
-}
-
-.z-index_modal {
-    z-index: var(--uikit-utils-modal-overlay-z-index);
-}
-
-.z-index_window {
-    z-index: var(--uikit-utils-overlay-z-index);
+    z-index: 2;
 }

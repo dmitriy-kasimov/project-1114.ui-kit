@@ -1,28 +1,15 @@
-import React, { FC, memo } from 'react';
-import { classNames } from 'lib/classNames/classNames';
-import cls from './Overlay.module.scss';
+import React, { FC, memo } from 'react'
 
-type OverlayType = 'window' | 'modal';
+import cls from './Overlay.module.scss'
+import { classNames } from 'lib/classNames/classNames'
 
 interface OverlayProps {
-    className?: string;
-    onClick?: () => void;
-    type: OverlayType;
+    className?: string
+    onClick?: () => void
 }
 
-export const Overlay: FC<OverlayProps> = memo((props) => {
-    const {
-        className,
-        onClick,
-        type
-    } = props;
+export const Overlay: FC<OverlayProps> = memo(props => {
+    const { className, onClick } = props
 
-    const mapOverlayTypeToZIndex: Record<OverlayType, string> = {
-        modal: 'z-index_modal',
-        window: 'z-index_window'
-    }
-
-    return (
-        <div onClick={onClick} className={classNames(cls.Overlay, {}, [className, cls[mapOverlayTypeToZIndex[type]]])} />
-    );
-});
+    return <div onClick={onClick} className={classNames(cls.Overlay, {}, [className])} />
+})
