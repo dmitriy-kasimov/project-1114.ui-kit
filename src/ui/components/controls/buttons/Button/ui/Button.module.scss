@@ -1,8 +1,6 @@
 @use '../../../controls';
 
 .Button {
-    @include controls.default-styles;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,13 +11,15 @@
     text-decoration: none;
     appearance: none;
     touch-action: manipulation;
+    cursor: pointer;
+    transition: all 0.3s ease;
 
     &:hover {
-        @include controls.hover;
+        opacity: 0.95;
     }
 
     &:active {
-        @include controls.active;
+        transform: scale(0.95);
     }
 }
 
@@ -33,11 +33,11 @@
 }
 
 .primary {
-    background: var(--uikit-controls-bg);
+    background: var(--color-accent);
 }
 
 .outline {
-    border: 1px solid var(--uikit-button-border-color);
+    border: 1px solid var(--color-accent);
     background: transparent;
 }
 

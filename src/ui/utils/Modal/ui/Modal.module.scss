@@ -17,7 +17,7 @@
 .content {
     @include anims.util;
 
-    background: var(--uikit-utils-bg);
+    background: var(--color-main);
     border-radius: var(--uikit-border-radius-s);
     max-width: 60%;
     z-index: var(--uikit-utils-modal-z-index);

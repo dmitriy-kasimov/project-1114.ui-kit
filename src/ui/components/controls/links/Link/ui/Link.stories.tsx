@@ -1,42 +1,36 @@
-import React from 'react';
+import React from 'react'
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react'
 
 import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
-import { Link } from '../index';
-import { Text } from 'ui/components/shared/Text';
+import { Link } from '../index'
+import { Text } from 'ui/components/shared/Text'
 
 const meta: Meta<typeof Link> = {
     title: 'components/controls/Link',
     component: Link,
-    decorators: [
-        (Story) => (
-          decoratorBackground(Story)
-        ),
-      ],
+    decorators: [Story => decoratorBackground(Story)],
     parameters: {
-        layout: 'fullscreen',
+        layout: 'fullscreen'
     },
 
     tags: ['autodocs'],
-    argTypes: {
+    argTypes: {}
+}
 
-    },
-};
-
-export default meta;
-type Story = StoryObj<typeof Link>;
+export default meta
+type Story = StoryObj<typeof Link>
 
 export const LinkDefault: Story = {
     args: {
-      children: <Text >Link 1</Text>,
-    },
-};
+        children: <Text>Link 1</Text>
+    }
+}
 
 export const LinkDisabled: Story = {
-  args: {
-    children: <Text >Link 1</Text>,
-    disabled: true
-  },
-};
+    args: {
+        children: <Text>Link 1</Text>,
+        disabled: true
+    }
+}

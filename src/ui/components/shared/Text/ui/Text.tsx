@@ -32,7 +32,7 @@ export const Text = <T extends ElementType>(
     props: TextProps<T extends TAvailableSectionTypes ? T : 'span'>
 ) => {
     const {
-        color = 'light',
+        color = 'secondary',
         size = 'm',
         align = 'left',
         weight = '400',

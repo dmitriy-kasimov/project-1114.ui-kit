@@ -10,13 +10,13 @@
 }
 
 .wrapper {
-    @include controls.default-styles;
+    cursor: pointer;
+    background: var(--color-accent);
 
     &:hover {
-        @include controls.hover;
+        opacity: 0.95;
     }
 
-    background-clip: padding-box;
     padding: 0.25rem;
     border-radius: var(--uikit-border-radius-s);
 
@@ -32,7 +32,7 @@
     }
 
     .input::placeholder {
-        color: #212529;
+        color: var(--color-secondary);
         opacity: 0.4;
     }
 }

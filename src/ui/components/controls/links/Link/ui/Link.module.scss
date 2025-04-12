@@ -9,11 +9,11 @@
     background: transparent;
     box-shadow: none;
     border: none;
+    color: var(--color-accent);
 
     &:hover {
-        @include controls.hover;
-
-        box-shadow: 0 2px 0 0 var(--uikit-text-color-main);
+        opacity: 0.95;
+        box-shadow: 0 2px 0 0 var(--color-accent);
     }
 }
 

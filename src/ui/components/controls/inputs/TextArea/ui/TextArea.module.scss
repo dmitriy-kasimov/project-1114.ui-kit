@@ -6,7 +6,8 @@
 }
 
 .field {
-    @include controls.default-styles;
+    cursor: pointer;
+    background: var(--color-accent);
 
     &:hover {
         @include controls.hover;

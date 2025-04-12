@@ -24,19 +24,19 @@ const meta: Meta<typeof Window> = {
 
 const sidebarItems: SidebarItemType[] = [
     {
-        desciption: <Text>Link1</Text>,
+        desciption: <Text color={'main'}>Link1</Text>,
         onClick: () => {
             console.log('link 1 has worked!')
         }
     },
     {
-        desciption: <Text>Link2</Text>,
+        desciption: <Text color={'main'}>Link2</Text>,
         onClick: () => {
             console.log('link 2 has worked!')
         }
     },
     {
-        desciption: <Text>Link3</Text>,
+        desciption: <Text color={'main'}>Link3</Text>,
         onClick: () => {
             console.log('link 3 has worked!')
         }

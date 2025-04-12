@@ -4,12 +4,12 @@
 }
 
 .filled {
-    background: var(--uikit-widgets-bg-color);
+    background: var(--color-secondary);
 }
 
 .outlined {
     background: none;
-    border: 1px solid var(--uikit-theme-main-color);
+    border: 1px solid var(--color-secondary);
 }
 
 .fullWidth {

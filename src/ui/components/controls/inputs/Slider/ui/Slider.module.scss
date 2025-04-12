@@ -3,7 +3,7 @@
 .input {
     @include controls.default-styles;
 
-    background: var(--uikit-controls-bg);
+    background: var(--color-secondary);
     height: 15px;
     border-radius: 50px;
     padding: 3px;
@@ -28,7 +28,7 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: var(--uikit-theme-main-color);
+    background-color: var(--color-accent);
 }
 
 .input:disabled {

@@ -10,7 +10,7 @@
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--uikit-controls-bg-color);
+    background-color: var(--color-secondary);
     border-radius: var(--uikit-border-radius-s);
 }
 
@@ -18,7 +18,7 @@
     @include controls.default-styles;
 
     border-radius: var(--uikit-border-radius-s);
-    background-color: var(--uikit-theme-main-color);
+    background-color: var(--color-accent);
 }
 
 ::-webkit-scrollbar-corner {
