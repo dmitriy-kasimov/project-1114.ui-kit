@@ -1,8 +1,5 @@
-@use '../controls';
-
 ::-webkit-scrollbar {
-    @include controls.default-styles;
-
+    cursor: pointer;
     border-radius: var(--uikit-border-radius-s);
     border: none;
     width: 0.5rem;
@@ -15,8 +12,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    @include controls.default-styles;
-
+    cursor: pointer;
     border-radius: var(--uikit-border-radius-s);
     background-color: var(--color-accent);
 }

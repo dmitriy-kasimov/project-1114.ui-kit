@@ -1,8 +1,6 @@
-// @use 'styles/effects/shadows';
-@use '../../../controls';
-
 .disabled {
-    @include controls.disabled;
+    pointer-events: none;
+    opacity: 0.5;
 }
 
 .field {
@@ -10,7 +8,7 @@
     background: var(--color-accent);
 
     &:hover {
-        @include controls.hover;
+        opacity: 0.95;
     }
 
     border-radius: var(--uikit-border-radius-s);

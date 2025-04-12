@@ -1,5 +1,3 @@
-@use '../../../../controls';
-
 .input {
     display: none;
 }
@@ -24,13 +22,12 @@
 /* стили при наведении курсора на радио */
 .input:not(:disabled):not(:checked) + label:hover::before {
     // TODO
-    @include controls.hover;
+    opacity: 0.95;
 }
 
 /* стили для радиокнопки, находящейся в фокусе */
 .input:focus + .radioButton {
     // TODO
-    @include controls.focus;
 }
 
 /* стили для радиокнопки, находящейся в состоянии checked */
@@ -40,10 +37,11 @@
 
 /* стили для активной радиокнопки (при нажатии на неё) */
 .input:not(:disabled):active + .radioButton {
-    @include controls.active;
+    transform: scale(0.95);
 }
 
 /* стили для радиокнопки, находящейся в состоянии disabled */
 .disabled {
-    @include controls.disabled;
+    pointer-events: none;
+    opacity: 0.5;
 }

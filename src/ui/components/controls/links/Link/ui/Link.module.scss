@@ -1,6 +1,3 @@
-// @use 'styles/effects/shadows';
-@use '../../../controls';
-
 .Link {
     transition: 0.3s ease;
     text-transform: uppercase;
@@ -18,9 +15,10 @@
 }
 
 .Link:disabled {
-    @include controls.disabled;
+    pointer-events: none;
+    opacity: 0.5;
 }
 
 .Link:active {
-    @include controls.active;
+    transform: scale(0.95);
 }

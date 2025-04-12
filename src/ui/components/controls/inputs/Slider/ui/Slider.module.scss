@@ -1,8 +1,5 @@
-@use '../../../controls';
-
 .input {
-    @include controls.default-styles;
-
+    transition: all 0.3s ease;
     background: var(--color-secondary);
     height: 15px;
     border-radius: 50px;
@@ -10,7 +7,7 @@
     appearance: none !important;
 
     &:hover {
-        @include controls.hover;
+        opacity: 0.95;
     }
 }
 
@@ -20,7 +17,7 @@
     }
 
     &:active {
-        @include controls.active;
+        transform: scale(0.95);
     }
 
     cursor: ew-resize;
@@ -32,5 +29,6 @@
 }
 
 .input:disabled {
-    @include controls.disabled;
+    pointer-events: none;
+    opacity: 0.5;
 }

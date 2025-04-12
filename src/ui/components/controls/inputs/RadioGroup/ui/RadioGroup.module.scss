@@ -1,5 +1,4 @@
-@use '../../../controls';
-
 .disabled {
-    @include controls.disabled;
+    pointer-events: none;
+    opacity: 0.5;
 }
