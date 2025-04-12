@@ -41,7 +41,6 @@ export { Tape } from './ui/widgets/Tape'
 export type { PostType } from './ui/widgets/Tape'
 
 export { Sidebar } from './ui/widgets/Sidebar'
-export type { SidebarItemType } from './ui/widgets/Sidebar'
 
 export { Card } from './ui/components/shared/Card'
 export { Accordion } from './ui/widgets/Accordion'

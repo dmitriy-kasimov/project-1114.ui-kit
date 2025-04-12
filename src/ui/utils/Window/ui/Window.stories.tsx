@@ -8,7 +8,8 @@ import { Window } from './Window'
 import { Skeleton } from 'ui/components/shared/Skeleton/Skeleton'
 import { HStack, VStack } from 'ui/components/shared/Stack'
 import { Text } from 'ui/components/shared/Text'
-import { Sidebar, SidebarItemType } from 'ui/widgets/Sidebar'
+import { Sidebar } from 'ui/widgets/Sidebar'
+import { Link } from 'ui/components/controls/links/Link'
 
 const meta: Meta<typeof Window> = {
     title: 'utils/modal/Window',
@@ -22,25 +23,18 @@ const meta: Meta<typeof Window> = {
     argTypes: {}
 }
 
-const sidebarItems: SidebarItemType[] = [
-    {
-        desciption: <Text color={'main'}>Link1</Text>,
-        onClick: () => {
-            console.log('link 1 has worked!')
-        }
-    },
-    {
-        desciption: <Text color={'main'}>Link2</Text>,
-        onClick: () => {
-            console.log('link 2 has worked!')
-        }
-    },
-    {
-        desciption: <Text color={'main'}>Link3</Text>,
-        onClick: () => {
-            console.log('link 3 has worked!')
-        }
-    }
+const sidebarItems = [
+    <Link>
+        <Text color={'main'}>Link1</Text>
+    </Link>,
+    <HStack align={'center'} gap={'s'}>
+        <Skeleton width={30} height={30} border={'50%'} />
+        <Link>
+            <Text color={'main'}>Link2</Text>
+        </Link>
+    </HStack>,
+
+    <Text color={'main'}>Link3</Text>
 ]
 
 export default meta

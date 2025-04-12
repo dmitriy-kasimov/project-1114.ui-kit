@@ -5,13 +5,24 @@ Usage example:
 ```typescript jsx
 import { 
     Sidebar,
-    SidebarItemType
+    Link,
+    HStack,
+    Text,
+    Skeleton
 } from '@project-1114/ui-kit'
 
- const sidebarItems: SidebarItemType[] = [
-    { desciption: <Text size="xl">Link1</Text>, onClick: () => console.log('Click on item 1') },
-    { desciption: <Text size="xl">Link2</Text>, onClick: () => console.log('Click on item 2') },
-    { desciption: <Text size="xl">Link3</Text>, onClick: () => console.log('Click on item 3') },
+const sidebarItems = [
+    <Link>
+        <Text color={'main'}>Link1</Text>
+    </Link>,
+    <HStack align={'center'} gap={'s'}>
+        <Skeleton width={30} height={30} border={'50%'} />
+        <Link>
+            <Text color={'main'}>Link2</Text>
+        </Link>
+    </HStack>,
+
+    <Text color={'main'}>Link3</Text>
 ]
 
 export function App(){

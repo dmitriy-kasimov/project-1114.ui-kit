@@ -6,6 +6,9 @@ import { decoratorBackground } from '../../../../../../.storybook/decorators/dec
 
 import { Sidebar } from './Sidebar'
 import { Text } from 'ui/components/shared/Text'
+import { Link } from 'ui/components/controls/links/Link'
+import { HStack } from 'ui/components/shared/Stack'
+import { Skeleton } from 'ui/components/shared/Skeleton'
 
 const meta: Meta<typeof Sidebar> = {
     title: 'widgets/Sidebar',
@@ -25,24 +28,17 @@ type Story = StoryObj<typeof Sidebar>
 export const ModalOpen: Story = {
     args: {
         items: [
-            {
-                desciption: <Text color={'main'}>Link1</Text>,
-                onClick: () => {
-                    console.log('link 1 has worked!')
-                }
-            },
-            {
-                desciption: <Text color={'main'}>Link2</Text>,
-                onClick: () => {
-                    console.log('link 2 has worked!')
-                }
-            },
-            {
-                desciption: <Text color={'main'}>Link3</Text>,
-                onClick: () => {
-                    console.log('link 3 has worked!')
-                }
-            }
+            <Link>
+                <Text color={'main'}>Link1</Text>
+            </Link>,
+            <HStack align={'center'} gap={'s'}>
+                <Skeleton width={30} height={30} border={'50%'} />
+                <Link>
+                    <Text color={'main'}>Link2</Text>
+                </Link>
+            </HStack>,
+
+            <Text color={'main'}>Link3</Text>
         ]
     }
 }

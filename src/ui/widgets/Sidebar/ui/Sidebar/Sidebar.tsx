@@ -1,29 +1,18 @@
-import React, { FC, useMemo } from "react";
-import { classNames } from "lib/classNames/classNames";
-import { memo } from "react";
-import  cls  from './Sidebar.module.scss';
-import { SidebarProps } from "../../types/SidebarProps";
-import { VStack } from "ui/components/shared/Stack";
-import { SidebarItem } from "../SidebarItem/SidebarItem";
+import React, { FC } from 'react'
+import { classNames } from 'lib/classNames/classNames'
+import { memo } from 'react'
+import cls from './Sidebar.module.scss'
+import { SidebarProps } from '../../types/SidebarProps'
+import { VStack } from 'ui/components/shared/Stack'
 
-export const Sidebar: FC<SidebarProps> = memo((props) => {
-  const {
-    className,
-    items
-  } = props;
-  
-  const itemsList = useMemo(()=> items.map((item, index) => (
-    <SidebarItem 
-      item={item}
-      key={index}
-    />
-  )), [])
+export const Sidebar: FC<SidebarProps> = memo(props => {
+    const { className, items } = props
 
-  return (
-    <div className={classNames(cls.Sidebar, {}, [className])}>
-        <VStack role="navigation" gap="m" max>
-            {itemsList}
-        </VStack>
-    </div>
-  );
-});
+    return (
+        <div className={classNames(cls.Sidebar, {}, [className])}>
+            <VStack role='navigation' gap='m' max>
+                {items}
+            </VStack>
+        </div>
+    )
+})
