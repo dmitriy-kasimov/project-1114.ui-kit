@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react'
-import { TIndent } from 'types/TIndent'
-import { TBorder } from 'types/TBorder'
+import { TIndent } from 'ui/TIndent'
+import { TBorder } from 'ui/TBorder'
 
 export type TButtonVariant = 'primary' | 'outline' | 'clear'
 

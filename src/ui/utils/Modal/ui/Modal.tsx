@@ -5,9 +5,9 @@ import { Portal } from '../../Portal/Portal'
 import { Overlay } from '../../Overlay/Overlay'
 import { useModal } from 'lib/hooks/useModal/useModal'
 import { ANIMATION_DELAY } from 'styles/effects/anims'
-import { ModalProps, mapContentPadding } from '../types/ModalProps'
+import { IModalProps, mapContentPadding } from '../types/IModalProps'
 
-export const Modal: FC<ModalProps> = props => {
+export const Modal: FC<IModalProps> = props => {
     const {
         className,
         children,

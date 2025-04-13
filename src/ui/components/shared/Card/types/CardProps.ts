@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from 'react'
-import { TIndent } from 'types/TIndent'
+import { TIndent } from 'ui/TIndent'
 
 export type TCardVariant = 'filled' | 'outlined'
 
