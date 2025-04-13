@@ -35,6 +35,11 @@
     /* Absolute positioning */
     .top {
         top: calc(40px * -1);
+
+        /* CSS border triangles */
+        &::before {
+            top: 100%;
+        }
     }
 
     /* Absolute positioning */
@@ -42,11 +47,23 @@
         left: calc(100% + 40px);
         top: 50%;
         transform: translateX(0) translateY(-50%);
+
+        /* CSS border triangles */
+        &::before {
+            left: calc(6px * -1);
+            top: 50%;
+            transform: translateX(0) translateY(-50%);
+        }
     }
 
     /* Absolute positioning */
     .bottom {
         bottom: calc(40px * -1);
+
+        /* CSS border triangles */
+        &::before {
+            bottom: 100%;
+        }
     }
 
     /* Absolute positioning */
@@ -62,7 +79,6 @@
             right: calc(6px * -2);
             top: 50%;
             transform: translateX(0) translateY(-50%);
-            border-left-color: white;
         }
     }
 }
