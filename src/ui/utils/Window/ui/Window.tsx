@@ -32,7 +32,7 @@ export const Window: FC<IWindowProps> = memo(props => {
         >
             <div className={classNames(cls.content, {}, [className])}>
                 {sidebar}
-                {children}
+                <div className={cls.ChildrenWrapper}>{children}</div>
             </div>
         </Modal>
     )

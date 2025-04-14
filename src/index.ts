@@ -59,6 +59,3 @@ export type { Mods } from './lib/classNames/classNames'
 // assets
 import ArrowBottomIcon from './styles/assets/icons/arrow-bottom.svg'
 export { ArrowBottomIcon }
-
-export type { TBorder } from './ui/TBorder'
-export type { TIndent } from './ui/TIndent'

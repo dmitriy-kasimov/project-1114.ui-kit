@@ -146,3 +146,81 @@ export const FullscreenWithSidebar: Story = {
         )
     }
 }
+
+export const Overflowed: Story = {
+    args: {
+        isOpen: true,
+        fullscreen: true,
+        sidebar: <Sidebar items={sidebarItems} />,
+        children: (
+            <VStack gap='l'>
+                <HStack gap='l'>
+                    <VStack gap='l'>
+                        <Skeleton width={300} height={200} />
+                        <Skeleton width={300} height={200} />
+                    </VStack>
+                    <VStack gap='l'>
+                        <Skeleton width={300} height={200} />
+                        <Skeleton width={300} height={200} />
+                    </VStack>
+                    <VStack gap='l'>
+                        <Skeleton width={300} height={200} />
+                        <Skeleton width={300} height={200} />
+                    </VStack>
+                    <VStack gap='l'>
+                        <Skeleton width={300} height={200} />
+                        <Skeleton width={300} height={200} />
+                    </VStack>
+                    <VStack gap='l'>
+                        <Skeleton width={300} height={200} />
+                        <Skeleton width={300} height={200} />
+                    </VStack>
+                </HStack>
+
+                <HStack gap='l'>
+                    <VStack gap='l'>
+                        <Skeleton width={300} height={200} />
+                        <Skeleton width={300} height={200} />
+                    </VStack>
+                    <VStack gap='l'>
+                        <Skeleton width={300} height={200} />
+                        <Skeleton width={300} height={200} />
+                    </VStack>
+                    <VStack gap='l'>
+                        <Skeleton width={300} height={200} />
+                        <Skeleton width={300} height={200} />
+                    </VStack>
+                </HStack>
+                <HStack gap='l'>
+                    <VStack gap='l'>
+                        <Skeleton width={300} height={200} />
+                        <Skeleton width={300} height={200} />
+                    </VStack>
+                    <VStack gap='l'>
+                        <Skeleton width={300} height={200} />
+                        <Skeleton width={300} height={200} />
+                    </VStack>
+                    <VStack gap='l'>
+                        <Skeleton width={300} height={200} />
+                        <Skeleton width={300} height={200} />
+                    </VStack>
+                </HStack>
+
+                <HStack gap='l'>
+                    <VStack gap='l'>
+                        <Skeleton width={300} height={200} />
+                        <Skeleton width={300} height={200} />
+                    </VStack>
+                    <VStack gap='l'>
+                        <Skeleton width={300} height={200} />
+                        <Skeleton width={300} height={200} />
+                    </VStack>
+                    <VStack gap='l'>
+                        <Skeleton width={300} height={200} />
+                        <Skeleton width={300} height={200} />
+                    </VStack>
+                </HStack>
+            </VStack>
+        )
+    }
+}
