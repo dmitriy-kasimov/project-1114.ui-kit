@@ -5,6 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Button } from '../index'
 import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 import { Text } from 'ui/components/shared/Text'
+import { Skeleton } from 'ui/components/shared/Skeleton'
 
 const meta: Meta<typeof Button> = {
     title: 'components/controls/Button',
@@ -59,5 +60,13 @@ export const VariantClear: Story = {
     args: {
         children: <Text>Click on me!</Text>,
         variant: 'clear'
+    }
+}
+
+export const WithLeftAddon: Story = {
+    args: {
+        addonLeft: <Skeleton width={30} height={30} border={'50%'} />,
+        children: <Text>Click on me!</Text>,
+        fullWidth: true
     }
 }
