@@ -37,6 +37,13 @@ export const VariantOutlined: Story = {
     }
 }
 
+export const VariantTransparent: Story = {
+    args: {
+        variant: 'transparent',
+        children
+    }
+}
+
 export const WithoutPadding: Story = {
     args: {
         padding: '0',

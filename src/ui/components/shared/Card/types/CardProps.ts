@@ -1,7 +1,7 @@
 import { HTMLAttributes, ReactNode } from 'react'
 import { TIndent } from '../../../../../types/TIndent'
 
-export type TCardVariant = 'filled' | 'outlined'
+export type TCardVariant = 'filled' | 'outlined' | 'transparent'
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
     className?: string
