@@ -40,8 +40,6 @@ export type { TableBodyRow } from './ui/widgets/Table'
 export { Tape } from './ui/widgets/Tape'
 export type { PostType } from './ui/widgets/Tape'
 
-export { Sidebar } from './ui/widgets/Sidebar'
-
 export { Card } from './ui/components/shared/Card'
 export { Accordion } from './ui/widgets/Accordion'
 
@@ -51,6 +49,8 @@ export type { IModalProps } from './ui/utils/Modal'
 
 export { ModalConfirm } from './ui/utils/ModalConfirm/index'
 export { Window } from './ui/utils/Window/index'
+export { Sidebar } from './ui/widgets/Sidebar'
+export { Navbar } from './ui/widgets/Navbar'
 
 // libs
 export { classNames } from './lib/classNames/classNames'
