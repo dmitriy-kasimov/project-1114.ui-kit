@@ -5,6 +5,7 @@ import { IWindowProps } from '../types/WindowProps'
 import { Modal } from 'ui/utils/Modal'
 import { Mods, classNames } from 'lib/classNames/classNames'
 import cls from './Window.module.scss'
+import { VStack } from 'ui/components/shared/Stack'
 
 export const Window: FC<IWindowProps> = memo(props => {
     const {
@@ -14,6 +15,7 @@ export const Window: FC<IWindowProps> = memo(props => {
         fullscreen = false,
 
         sidebar,
+        navbar,
         children
     } = props
 
@@ -32,7 +34,10 @@ export const Window: FC<IWindowProps> = memo(props => {
         >
             <div className={classNames(cls.content, {}, [className])}>
                 {sidebar}
-                <div className={cls.ChildrenWrapper}>{children}</div>
+                <VStack max>
+                    {navbar}
+                    <div className={cls.ChildrenWrapper}>{children}</div>
+                </VStack>
             </div>
         </Modal>
     )

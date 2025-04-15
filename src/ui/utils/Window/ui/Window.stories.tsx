@@ -10,6 +10,7 @@ import { HStack, VStack } from 'ui/components/shared/Stack'
 import { Text } from 'ui/components/shared/Text'
 import { Sidebar } from 'ui/widgets/Sidebar'
 import { Link } from 'ui/components/controls/links/Link'
+import { Navbar } from 'ui/widgets/Navbar'
 
 const meta: Meta<typeof Window> = {
     title: 'utils/modal/Window',
@@ -57,6 +58,27 @@ export const SmallWithSidebar: Story = {
     args: {
         isOpen: true,
         sidebar: <Sidebar items={sidebarItems} />,
+        children: (
+            <VStack gap='l'>
+                <Skeleton width={300} height={200} />
+                <Skeleton width={300} height={200} />
+            </VStack>
+        )
+    }
+}
+
+export const SmallWithNavbar: Story = {
+    args: {
+        isOpen: true,
+        sidebar: <Sidebar items={sidebarItems} />,
+        navbar: (
+            <Navbar>
+                <HStack max justify={'between'} align={'center'}>
+                    <Text color={'main'}>Left</Text>
+                    <Text color={'main'}>Right</Text>
+                </HStack>
+            </Navbar>
+        ),
         children: (
             <VStack gap='l'>
                 <Skeleton width={300} height={200} />

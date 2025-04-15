@@ -3,4 +3,5 @@ import { IModalProps } from '../../Modal/types/IModalProps'
 
 export interface IWindowProps extends IModalProps {
     sidebar?: ReactElement
+    navbar?: ReactElement
 }

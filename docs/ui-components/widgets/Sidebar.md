@@ -1,10 +1,10 @@
-## Sidebar
+## Navbar
 
 Usage example:
 
 ```typescript jsx
 import { 
-    Sidebar,
+    Navbar,
     Link,
     HStack,
     Text,
@@ -27,7 +27,7 @@ const sidebarItems = [
 
 export function App(){
     return (
-        <Sidebar 
+        <Navbar 
             items={sidebar}
         />
     )

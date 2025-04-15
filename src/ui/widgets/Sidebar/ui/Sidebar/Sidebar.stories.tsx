@@ -11,7 +11,7 @@ import { HStack } from 'ui/components/shared/Stack'
 import { Skeleton } from 'ui/components/shared/Skeleton'
 
 const meta: Meta<typeof Sidebar> = {
-    title: 'widgets/Sidebar',
+    title: 'widgets/Navbar',
     component: Sidebar,
     decorators: [Story => decoratorBackground(Story)],
     parameters: {

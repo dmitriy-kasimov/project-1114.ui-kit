@@ -47,7 +47,7 @@ ui-kit for the Project-1114
 - [ProgressBar](/docs/ui-components/widgets/ProgressBar.md)
 - [Table](/docs/ui-components/widgets/Table.md)
 - [Tape](/docs/ui-components/widgets/Tape.md)
-- [Sidebar](/docs/ui-components/widgets/Sidebar.md)
+- [Navbar](/docs/ui-components/widgets/Sidebar.md)
 - [Accordion](/docs/ui-components/widgets/Accordion)
 
 ### utils
