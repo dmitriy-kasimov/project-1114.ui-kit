@@ -68,15 +68,15 @@
 
 @mixin progress-bar-background($i) {
     @if $i <= 33 {
-        background-color: var(--uikit-bar-bg-color-f);
+        background-color: rgb(231 0 0 / 70%);
     } @else if $i > 33 and $i <= 50 {
-        background-color: var(--uikit-bar-bg-color-d);
+        background-color: rgb(255 136 0 / 70%);
     } @else if $i > 50 and $i <= 66 {
-        background-color: var(--uikit-bar-bg-color-c);
+        background-color: rgb(235 235 0 / 70%);
     } @else if $i > 66 and $i <= 85 {
-        background-color: var(--uikit-bar-bg-color-b);
+        background-color: rgb(123 255 0 / 70%);
     } @else {
-        background-color: var(--uikit-bar-bg-color-a);
+        background-color: rgb(0 255 0 / 70%);
     }
 }
 

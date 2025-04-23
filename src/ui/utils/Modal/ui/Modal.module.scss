@@ -1,5 +1,3 @@
-@use 'styles/effects/anims';
-
 .Modal {
     position: fixed;
     top: 0;
@@ -15,8 +13,8 @@
 }
 
 .content {
-    @include anims.util;
-
+    transition: 0.3s transform;
+    transform: scale(0.5);
     background: var(--color-main);
     border-radius: var(--uikit-border-radius-s);
     max-width: 60%;
@@ -64,12 +62,12 @@
     z-index: var(--uikit-utils-modal-z-index);
 
     .content {
-        @include anims.util-opened;
+        transform: scale(1);
     }
 }
 
 .isClosing {
     .content {
-        @include anims.util-closing;
+        transform: scale(0.2);
     }
 }

@@ -4,7 +4,6 @@ import cls from './Modal.module.scss'
 import { Portal } from '../../Portal/Portal'
 import { Overlay } from '../../Overlay/Overlay'
 import { useModal } from 'lib/hooks/useModal/useModal'
-import { ANIMATION_DELAY } from 'styles/effects/anims'
 import { IModalProps, mapContentPadding } from '../types/IModalProps'
 
 export const Modal: FC<IModalProps> = props => {
@@ -21,7 +20,7 @@ export const Modal: FC<IModalProps> = props => {
     } = props
 
     const { isClosing, isMounted, close } = useModal({
-        animationDelay: ANIMATION_DELAY,
+        animationDelay: 300,
         onClose,
         isOpen,
         closable

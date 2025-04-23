@@ -5,7 +5,6 @@ import { Mods, classNames } from 'lib/classNames/classNames'
 import { Text } from 'ui/components/shared/Text'
 import { Button } from 'ui/components/controls/buttons/Button'
 import { useModal } from 'lib/hooks/useModal/useModal'
-import { ANIMATION_DELAY } from 'styles/effects/anims'
 import { Portal } from 'ui/utils/Portal/Portal'
 import { Overlay } from 'ui/utils/Overlay/Overlay'
 import { HStack, VStack } from 'ui/components/shared/Stack'
@@ -23,7 +22,7 @@ export const ModalConfirm: FC<ModalConfirmProps> = props => {
     } = props
 
     const { isClosing, isMounted, close } = useModal({
-        animationDelay: ANIMATION_DELAY,
+        animationDelay: 300,
         onClose,
         isOpen
     })

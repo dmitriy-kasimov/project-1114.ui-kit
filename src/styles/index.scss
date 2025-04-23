@@ -1,3 +1,7 @@
 @use './config/default.scss';
-@use './standards/standards';
+@use './standards/_indents';
+@use './standards/_borders';
+@use './standards/_colors';
+@use './standards/_fonts';
+@use './standards/_z-index';
 @use '../ui/components/controls/scrollbar/scrollbar';
