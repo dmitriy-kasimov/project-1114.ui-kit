@@ -46,12 +46,7 @@ export const Tooltip: FC<TooltipProps> = ({
         >
             {children}
             {active && (
-                <div
-                    className={classNames(cls.TooltipTip, {}, [cls[direction]])}
-                    style={{ top: `${cursorPos.y}px`, left: `${cursorPos.x}px` }}
-                >
-                    {content}
-                </div>
+                <div className={classNames(cls.TooltipTip, {}, [cls[direction]])}>{content}</div>
             )}
         </div>
     )

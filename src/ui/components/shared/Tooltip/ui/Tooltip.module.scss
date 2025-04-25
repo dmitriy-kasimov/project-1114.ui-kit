@@ -1,6 +1,7 @@
 /* Wrapping */
 .TooltipWrapper {
     display: inline-block;
+    position: relative;
 
     /* Absolute positioning */
     .TooltipTip {
@@ -13,19 +14,23 @@
     }
 
     .bottom-right {
-        transform: translate(0, 0);
+        top: 100%;
+        left: 0;
     }
 
     .top-right {
-        transform: translate(0, -100%);
+        bottom: 100%;
+        left: 0;
     }
 
     .bottom-left {
-        transform: translate(-100%, 0);
+        top: 100%;
+        right: 0;
     }
 
     .top-left {
-        transform: translate(-100%, -100%);
+        right: 0;
+        bottom: 100%;
     }
 }
 
