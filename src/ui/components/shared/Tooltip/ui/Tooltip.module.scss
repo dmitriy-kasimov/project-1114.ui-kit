@@ -14,23 +14,23 @@
     }
 
     .bottom-right {
-        top: 100%;
-        left: 0;
+        right: 0;
+        bottom: 100%;
     }
 
     .top-right {
-        bottom: 100%;
-        left: 0;
-    }
-
-    .bottom-left {
         top: 100%;
         right: 0;
     }
 
-    .top-left {
-        right: 0;
+    .bottom-left {
         bottom: 100%;
+        left: 0;
+    }
+
+    .top-left {
+        top: 100%;
+        left: 0;
     }
 }
 
