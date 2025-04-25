@@ -29,15 +29,19 @@ export const Tooltip: FC<TooltipProps> = ({
         }, delay)
 
         setCursorPos({ x, y })
+        console.log('join')
     }
 
     const hideTip = () => {
         clearInterval(timeout)
-        setActive(false)
+        setTimeout(() => {
+            setActive(false)
+        }, delay)
+        console.log('leave')
     }
 
     const direction = getTrigonometricQuad(cursorPos.x, cursorPos.y)
-
+    console.log(active)
     return (
         <div
             className={classNames(cls.TooltipWrapper, { [cls.fullWidth]: fullWidth }, [])}
