@@ -1,8 +1,13 @@
 import React, { FC, ForwardedRef, forwardRef } from 'react'
 import cls from './Button.module.scss'
-import { ButtonProps, mapBorderRadius, mapHPaddings, mapVPaddings } from '../types/ButtonProps'
+import {
+    ButtonProps,
+    gapClasses,
+    mapBorderRadius,
+    mapHPaddings,
+    mapVPaddings
+} from '../types/ButtonProps'
 import { Mods, classNames } from 'lib/classNames/classNames'
-import { HStack } from 'ui/components/shared/Stack'
 
 export const Button: FC<ButtonProps> = forwardRef((props, ref: ForwardedRef<HTMLButtonElement>) => {
     const {
@@ -31,6 +36,7 @@ export const Button: FC<ButtonProps> = forwardRef((props, ref: ForwardedRef<HTML
         cls[mapVPaddings[paddingV]],
         cls[mapHPaddings[paddingH]],
         cls[mapBorderRadius[borderRadius]],
+        cls[gapClasses[gap]],
         className
     ]
 
@@ -41,11 +47,9 @@ export const Button: FC<ButtonProps> = forwardRef((props, ref: ForwardedRef<HTML
             {...otherProps}
             ref={ref}
         >
-            <HStack align={'center'} gap={gap}>
-                {addonLeft}
-                {children}
-                {addonRight}
-            </HStack>
+            {addonLeft}
+            {children}
+            {addonRight}
         </button>
     )
 })

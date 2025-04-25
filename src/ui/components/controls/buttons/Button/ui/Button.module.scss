@@ -152,3 +152,31 @@
 .border-radius-xl {
     border-radius: var(--uikit-border-radius-xl);
 }
+
+.gap0 {
+    gap: 0;
+}
+
+.gap_xxs {
+    gap: var(--uikit-indent-xxs);
+}
+
+.gap_xs {
+    gap: var(--uikit-indent-xs);
+}
+
+.gap_s {
+    gap: var(--uikit-indent-s);
+}
+
+.gap_m {
+    gap: var(--uikit-indent-m);
+}
+
+.gap_l {
+    gap: var(--uikit-indent-l);
+}
+
+.gap_xl {
+    gap: var(--uikit-indent-xl);
+}

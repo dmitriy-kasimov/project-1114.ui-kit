@@ -11,14 +11,14 @@
         opacity: 0.95;
     }
 
-    border-radius: var(--uikit-border-radius-s);
+    border-radius: var(--uikit-border-radius-xs);
     position: relative;
 
     .label {
         position: absolute;
         top: 0;
         left: 0;
-        padding: 1rem 0.75rem;
+        padding: var(--uikit-indent-s) 0.75rem;
         pointer-events: none;
         border: 1px solid transparent;
         transform-origin: 0 0;
@@ -31,12 +31,13 @@
     background-color: transparent;
     border: none;
     line-height: 1.25;
+    color: var(--color-secondary);
 
     &:focus {
         outline: none;
     }
 
-    padding-top: 1.625rem;
+    padding-top: var(--uikit-indent-m);
 }
 
 .input::placeholder {

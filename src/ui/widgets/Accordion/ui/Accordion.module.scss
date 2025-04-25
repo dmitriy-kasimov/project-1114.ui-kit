@@ -1,7 +1,11 @@
 .Accordion {
     background: var(--color-accent);
-    border-radius: var(--uikit-border-radius-s);
+    border-radius: var(--uikit-border-radius-xs);
     padding: var(--uikit-indent-s);
+}
+
+.Button {
+    justify-content: space-between;
 }
 
 .arrow {

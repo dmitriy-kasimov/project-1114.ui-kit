@@ -49,3 +49,13 @@ export const mapBorderRadius: Record<TBorder, string> = {
     l: 'border-radius-l',
     xl: 'border-radius-xl'
 }
+
+export const gapClasses: Record<TIndent, string> = {
+    '0': 'gap_0',
+    xxs: 'gap_xxs',
+    xs: 'gap_xs',
+    s: 'gap_s',
+    m: 'gap_m',
+    l: 'gap_l',
+    xl: 'gap_xl'
+}

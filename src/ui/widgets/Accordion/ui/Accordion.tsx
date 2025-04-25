@@ -9,28 +9,18 @@ import ArrowBottom from 'styles/assets/icons/arrow-bottom.svg'
 import { Button } from 'ui/components/controls/buttons/Button'
 
 export const Accordion: FC<AccordionProps> = memo(props => {
-    const {
-        title,
-        description,
-        defaultOpen,
-        disabled,
-        className,
-        maxWidth = '500px',
-        minWidth = '300px'
-    } = props
+    const { title, description, defaultOpen, disabled, className } = props
     return (
         <Disclosure
             defaultOpen={defaultOpen}
             as={'div'}
-            className={cls.Accordion}
-            style={{ maxWidth, minWidth }}
+            className={classNames(cls.Accordion, {}, [className])}
         >
             {({ open }) => (
                 <>
                     <Disclosure.Button
                         as={Button}
                         disabled={disabled}
-                        addonLeft={title}
                         variant={'clear'}
                         addonRight={
                             <Icon
@@ -41,9 +31,15 @@ export const Accordion: FC<AccordionProps> = memo(props => {
                             />
                         }
                         fullWidth
-                        className={classNames('', { [cls.disabled]: disabled ?? false }, [])}
+                        paddingV={'0'}
+                        paddingH={'0'}
+                        className={classNames(
+                            cls.Button,
+                            { [cls.disabled]: disabled ?? false },
+                            []
+                        )}
                     >
-                        {null}
+                        {title}
                     </Disclosure.Button>
                     <Disclosure.Panel>{description}</Disclosure.Panel>
                 </>
