@@ -36,10 +36,11 @@
 }
 
 .checked + .label {
-    // background: var(--uikit-switcher-bg-color-active);
+    background: var(--color-accent);
 }
 
 .checked + .label::after {
     left: 100%;
     transform: translateX(-100%);
+    background: var(--color-secondary);
 }
