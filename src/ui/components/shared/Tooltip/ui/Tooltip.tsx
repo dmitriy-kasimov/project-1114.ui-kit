@@ -1,27 +1,34 @@
 import React, { FC, ReactNode, useState } from 'react'
 import cls from './Tooltip.module.scss'
 import { classNames } from 'lib/classNames/classNames'
+import { getTrigonometricQuad } from 'ui/components/shared/Tooltip/helpers/getTrigonometricQuad'
 
 type TooltipProps = {
     children: ReactNode
     delay?: number
     content: ReactNode
-    direction?: 'top' | 'bottom' | 'left' | 'right'
+    fullWidth?: boolean
 }
 
 export const Tooltip: FC<TooltipProps> = ({
     children,
     delay = 300,
     content,
-    direction = 'bottom'
+    fullWidth = false
 }) => {
     let timeout: ReturnType<typeof setTimeout>
     const [active, setActive] = useState(false)
+    const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
 
-    const showTip = () => {
+    const showTip = (e: React.MouseEvent<HTMLDivElement>) => {
+        const y = e.clientY
+        const x = e.clientX
+
         timeout = setTimeout(() => {
             setActive(true)
         }, delay)
+
+        setCursorPos({ x, y })
     }
 
     const hideTip = () => {
@@ -29,18 +36,20 @@ export const Tooltip: FC<TooltipProps> = ({
         setActive(false)
     }
 
+    const direction = getTrigonometricQuad(cursorPos.x, cursorPos.y)
+
     return (
         <div
-            className={classNames(cls.TooltipWrapper)}
-            // When to show the tooltip
-            onMouseEnter={showTip}
+            className={classNames(cls.TooltipWrapper, { [cls.fullWidth]: fullWidth }, [])}
+            onMouseEnter={e => showTip(e)}
             onMouseLeave={hideTip}
         >
-            {/* Wrapping */}
             {children}
             {active && (
-                <div className={classNames(cls.TooltipTip, {}, [cls[direction]])}>
-                    {/* Content */}
+                <div
+                    className={classNames(cls.TooltipTip, {}, [cls[direction]])}
+                    style={{ top: `${cursorPos.y}px`, left: `${cursorPos.x}px` }}
+                >
                     {content}
                 </div>
             )}
