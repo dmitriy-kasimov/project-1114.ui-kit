@@ -59,3 +59,11 @@ export type { Mods } from './lib/classNames/classNames'
 // assets
 import ArrowBottomIcon from './styles/assets/icons/arrow-bottom.svg'
 export { ArrowBottomIcon }
+import CashIcon from './styles/assets/icons/cash.svg'
+export { CashIcon }
+import DonatScoreIcon from './styles/assets/icons/donat-score.svg'
+export { DonatScoreIcon }
+import FreeScoreIcon from './styles/assets/icons/free-score.svg'
+export { FreeScoreIcon }
+import ScoreIcon from './styles/assets/icons/score.svg'
+export { ScoreIcon }
