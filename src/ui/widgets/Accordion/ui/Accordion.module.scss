@@ -1,7 +1,11 @@
 .Accordion {
-    background: var(--color-accent);
+    background: var(--color-main);
     border-radius: var(--uikit-border-radius-xs);
     padding: var(--uikit-indent-s);
+}
+
+.fullWidth {
+    width: 100%;
 }
 
 .Button {

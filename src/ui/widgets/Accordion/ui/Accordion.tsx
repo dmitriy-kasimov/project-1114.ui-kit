@@ -9,12 +9,12 @@ import ArrowBottom from 'styles/assets/icons/arrow-bottom.svg'
 import { Button } from 'ui/components/controls/buttons/Button'
 
 export const Accordion: FC<AccordionProps> = memo(props => {
-    const { title, description, defaultOpen, disabled, className } = props
+    const { title, description, defaultOpen, disabled, className, fullWidth = false } = props
     return (
         <Disclosure
             defaultOpen={defaultOpen}
             as={'div'}
-            className={classNames(cls.Accordion, {}, [className])}
+            className={classNames(cls.Accordion, { [cls.fullWidth]: fullWidth }, [className])}
         >
             {({ open }) => (
                 <>
