@@ -29,17 +29,6 @@ export const SliderDefault: Story = {
     }
 }
 
-export const SliderWithoutValue: Story = {
-    args: {
-        value: 5,
-        onChange: () => {},
-        min: 0,
-        max: 10,
-        step: 1,
-        showValue: false
-    }
-}
-
 export const SliderDisabled: Story = {
     args: {
         disabled: true,

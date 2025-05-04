@@ -8,7 +8,6 @@ export interface SliderProps extends HTMLInputProps {
     min: number
     max: number
     step: number
-    showValue?: boolean
 
     disabled?: boolean
     className?: string
