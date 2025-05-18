@@ -57,6 +57,8 @@ export { classNames } from './lib/classNames/classNames'
 export type { Mods } from './lib/classNames/classNames'
 
 // assets
+import ArrowBackIcon from './styles/assets/icons/arrow-back.svg'
+export { ArrowBackIcon }
 import ArrowBottomIcon from './styles/assets/icons/arrow-bottom.svg'
 export { ArrowBottomIcon }
 import CashIcon from './styles/assets/icons/cash.svg'
