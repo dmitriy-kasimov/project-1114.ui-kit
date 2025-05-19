@@ -31,7 +31,7 @@ export const Modal: FC<IModalProps> = props => {
         [cls.isClosing]: isClosing
     }
 
-    const addons = [cls[mapContentPadding[padding]]]
+    const addons = [cls[mapContentPadding[padding]], className]
 
     if (lazy && !isMounted) {
         return null
@@ -39,7 +39,7 @@ export const Modal: FC<IModalProps> = props => {
 
     return (
         <Portal element={portalElement}>
-            <div className={classNames(cls.Modal, mods, [className])}>
+            <div className={classNames(cls.Modal, mods, [])}>
                 <Overlay onClick={close} />
                 <div className={classNames(cls.content, { [cls.fullscreen]: fullscreen }, addons)}>
                     {children}
