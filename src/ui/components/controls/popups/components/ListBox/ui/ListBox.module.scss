@@ -1,17 +1,9 @@
-.trigger {
-    background: none;
-    border: none;
-    outline: none;
-    padding: 0;
-    margin: 0;
-}
-
 .options {
     min-width: 100%;
     background: var(--color-main);
     position: absolute;
     z-index: var(--uikit-controls-menu-z-index);
-    border-radius: var(--uikit-border-radius-xs);
+    border-radius: var(--uikit-border-radius-s);
     box-shadow: 2px 2px 8px var(--color-secondary);
 }
 
@@ -20,12 +12,12 @@
     cursor: pointer;
 
     &:first-child {
-        border-top-left-radius: var(--uikit-border-radius-xs);
-        border-top-right-radius: var(--uikit-border-radius-xs);
+        border-top-left-radius: var(--uikit-border-radius-s);
+        border-top-right-radius: var(--uikit-border-radius-s);
     }
 
     &:nth-last-child(-n+1) {
-        border-bottom-left-radius: var(--uikit-border-radius-xs);
-        border-bottom-right-radius: var(--uikit-border-radius-xs);
+        border-bottom-left-radius: var(--uikit-border-radius-s);
+        border-bottom-right-radius: var(--uikit-border-radius-s);
     }
 }

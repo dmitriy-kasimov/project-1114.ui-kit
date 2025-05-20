@@ -2,7 +2,7 @@
     transition: all 0.3s ease;
     background: var(--color-secondary);
     height: 0.25rem;
-    border-radius: var(--uikit-border-radius-xs);
+    border-radius: var(--uikit-border-radius-s);
     appearance: none !important;
 
     &:hover {
@@ -23,7 +23,7 @@
     appearance: none !important;
     width: 1rem;
     height: 0.5rem;
-    border-radius: var(--uikit-border-radius-xs);
+    border-radius: var(--uikit-border-radius-s);
     background-color: var(--color-accent);
 }
 

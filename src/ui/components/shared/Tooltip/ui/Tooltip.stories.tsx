@@ -27,7 +27,7 @@ export const Normal: Story = {
                 style={{
                     background: 'black',
                     padding: '0.5rem',
-                    borderRadius: 'var(--uikit-border-radius-xs)'
+                    borderRadius: 'var(--uikit-border-radius-s)'
                 }}
             >
                 <Text>Hover on me</Text>

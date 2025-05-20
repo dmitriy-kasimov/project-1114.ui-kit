@@ -1,36 +1,41 @@
 /* Wrapping */
 .TooltipWrapper {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     position: relative;
 
     /* Absolute positioning */
     .TooltipTip {
         position: absolute;
-        border-radius: var(--uikit-border-radius-xs);
+        border-radius: var(--uikit-border-radius-s);
         padding: var(--uikit-indent-s);
         background: var(--color-accent);
-        z-index: 100;
+        z-index: 1000;
         animation: show 0.3s backwards;
     }
 
     .bottom-right {
         right: 0;
         bottom: 100%;
+        box-shadow: 2px 2px 8px var(--color-secondary);
     }
 
     .top-right {
         top: 100%;
         right: 0;
+        box-shadow: 2px -2px 8px var(--color-secondary);
     }
 
     .bottom-left {
         bottom: 100%;
         left: 0;
+        box-shadow: -2px 2px 8px var(--color-secondary);
     }
 
     .top-left {
         top: 100%;
         left: 0;
+        box-shadow: -2px -2px 8px var(--color-secondary);
     }
 }
 
