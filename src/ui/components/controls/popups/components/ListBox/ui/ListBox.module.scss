@@ -11,12 +11,21 @@
     background: var(--color-main);
     position: absolute;
     z-index: var(--uikit-controls-menu-z-index);
-    border-radius: 12px;
-    overflow: hidden;
+    border-radius: var(--uikit-border-radius-xs);
     box-shadow: 2px 2px 8px var(--color-secondary);
 }
 
 .item {
     padding: var(--uikit-indent-s) var(--uikit-indent-m);
     cursor: pointer;
+
+    &:first-child {
+        border-top-left-radius: var(--uikit-border-radius-xs);
+        border-top-right-radius: var(--uikit-border-radius-xs);
+    }
+
+    &:nth-last-child(-n+1) {
+        border-bottom-left-radius: var(--uikit-border-radius-xs);
+        border-bottom-right-radius: var(--uikit-border-radius-xs);
+    }
 }
