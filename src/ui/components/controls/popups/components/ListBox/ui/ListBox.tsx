@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from 'react'
+import React, { useMemo } from 'react'
 import { Fragment } from 'react'
 import { Listbox as HListBox } from '@headlessui/react'
 import cls from './ListBox.module.scss'
@@ -12,7 +12,7 @@ import { ListBoxProps } from '../types/ListBoxProps'
 import ArrowBottom from 'styles/assets/icons/arrow-bottom.svg'
 import { Icon } from 'ui/components/shared/Icon'
 
-export const ListBox = memo(<T = string,>(props: ListBoxProps<T>) => {
+export function ListBox<T = string>(props: ListBoxProps<T>) {
     const {
         className,
         items,
@@ -30,6 +30,10 @@ export const ListBox = memo(<T = string,>(props: ListBoxProps<T>) => {
         return items?.find(item => item.value === value)
     }, [items, value])
 
+    const getDefaultValue = useMemo(() => {
+        return items?.find(item => item.value === defaultValue)
+    }, [items, defaultValue])
+
     return (
         <HStack gap='xs'>
             {label && <Text>{label}</Text>}
@@ -45,7 +49,7 @@ export const ListBox = memo(<T = string,>(props: ListBoxProps<T>) => {
                     addonRight={<Icon Svg={ArrowBottom} width={32} height={32} />}
                     paddingV={'xs'}
                 >
-                    {selectedItem?.content ?? defaultValue}
+                    {selectedItem?.content || getDefaultValue?.content}
                 </HListBox.Button>
                 <HListBox.Options className={classNames(cls.options, {}, optionsClasses)}>
                     {items?.map((item, index) => (
@@ -75,4 +79,4 @@ export const ListBox = memo(<T = string,>(props: ListBoxProps<T>) => {
             </HListBox>
         </HStack>
     )
-})
+}

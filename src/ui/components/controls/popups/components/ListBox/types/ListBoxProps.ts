@@ -11,8 +11,7 @@ export interface ListBoxProps<T = string> {
     items?: ListBoxItem<T>[]
     className?: string
     value?: T
-    defaultValue?: string
-    // extends string затем чтобы TS подхватывал энамы и выводил типы
+    defaultValue?: T
     onChange: (value: T) => void
     readonly?: boolean
     direction?: DropdownDirection
