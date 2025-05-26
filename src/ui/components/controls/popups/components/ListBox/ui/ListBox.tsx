@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { Fragment } from 'react'
 import { Listbox as HListBox } from '@headlessui/react'
 import cls from './ListBox.module.scss'
@@ -26,13 +26,12 @@ export function ListBox<T = string>(props: ListBoxProps<T>) {
 
     const optionsClasses = [mapDirectionClass[direction]]
 
-    const selectedItem = useMemo(() => {
-        return items?.find(item => item.value === value)
-    }, [items, value])
+    const selectedItem = items?.find(item => item.value === value)
 
-    const getDefaultValue = useMemo(() => {
-        return items?.find(item => item.value === defaultValue)
-    }, [items, defaultValue])
+    const defaultItem = items?.find(item => item.value === defaultValue)
+
+    console.log(`[PLATFORM] | [ui-kit] | selectedItem.value = ${selectedItem?.value}`)
+    console.log(`[PLATFORM] | [ui-kit] | getDefaultValue.value = ${defaultItem?.value}`)
 
     return (
         <HStack gap='xs'>
@@ -49,7 +48,7 @@ export function ListBox<T = string>(props: ListBoxProps<T>) {
                     addonRight={<Icon Svg={ArrowBottom} width={32} height={32} />}
                     paddingV={'xs'}
                 >
-                    {selectedItem?.content || getDefaultValue?.content}
+                    {selectedItem?.content || defaultItem?.content}
                 </HListBox.Button>
                 <HListBox.Options className={classNames(cls.options, {}, optionsClasses)}>
                     {items?.map((item, index) => (

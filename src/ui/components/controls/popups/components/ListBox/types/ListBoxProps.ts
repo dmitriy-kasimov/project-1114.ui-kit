@@ -10,8 +10,8 @@ export interface ListBoxItem<T = string> {
 export interface ListBoxProps<T = string> {
     items?: ListBoxItem<T>[]
     className?: string
-    value?: T
-    defaultValue?: T
+    value?: T | null
+    defaultValue?: T | null
     onChange: (value: T) => void
     readonly?: boolean
     direction?: DropdownDirection
