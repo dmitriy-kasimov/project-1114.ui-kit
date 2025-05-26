@@ -12,7 +12,7 @@ import { ListBoxProps } from '../types/ListBoxProps'
 import ArrowBottom from 'styles/assets/icons/arrow-bottom.svg'
 import { Icon } from 'ui/components/shared/Icon'
 
-export const ListBox = memo(<T extends string>(props: ListBoxProps<T>) => {
+export const ListBox = memo(<T = string,>(props: ListBoxProps<T>) => {
     const {
         className,
         items,
@@ -48,9 +48,9 @@ export const ListBox = memo(<T extends string>(props: ListBoxProps<T>) => {
                     {selectedItem?.content ?? defaultValue}
                 </HListBox.Button>
                 <HListBox.Options className={classNames(cls.options, {}, optionsClasses)}>
-                    {items?.map(item => (
+                    {items?.map((item, index) => (
                         <HListBox.Option
-                            key={item.value}
+                            key={index}
                             value={item.value}
                             disabled={item.disabled}
                             as={Fragment}
