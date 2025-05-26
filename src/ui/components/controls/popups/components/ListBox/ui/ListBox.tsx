@@ -6,8 +6,6 @@ import { classNames } from 'lib/classNames/classNames'
 import { mapDirectionClass } from '../../../styles/consts'
 import popupCls from '../../../styles/popup.module.scss'
 import { Button } from 'ui/components/controls/buttons/Button'
-import { HStack } from 'ui/components/shared/Stack'
-import { Text } from 'ui/components/shared/Text'
 import { ListBoxProps } from '../types/ListBoxProps'
 import ArrowBottom from 'styles/assets/icons/arrow-bottom.svg'
 import { Icon } from 'ui/components/shared/Icon'
@@ -20,8 +18,7 @@ export function ListBox<T = string>(props: ListBoxProps<T>) {
         defaultValue,
         value,
         readonly = false,
-        direction = 'bottom right',
-        label
+        direction = 'bottom right'
     } = props
 
     const optionsClasses = [mapDirectionClass[direction]]
@@ -34,48 +31,45 @@ export function ListBox<T = string>(props: ListBoxProps<T>) {
     console.log(`[PLATFORM] | [ui-kit] | getDefaultValue.value = ${defaultItem?.value}`)
 
     return (
-        <HStack gap='xs'>
-            {label && <Text>{label}</Text>}
-            <HListBox
-                disabled={readonly}
-                as='div'
-                className={classNames(cls.ListBox, {}, [className, popupCls.popup])}
-                value={value}
-                onChange={onChange}
+        <HListBox
+            disabled={readonly}
+            as='div'
+            className={classNames(cls.ListBox, {}, [className, popupCls.popup])}
+            value={value}
+            onChange={onChange}
+        >
+            <HListBox.Button
+                as={Button}
+                addonRight={<Icon Svg={ArrowBottom} width={32} height={32} />}
+                paddingV={'xs'}
             >
-                <HListBox.Button
-                    as={Button}
-                    addonRight={<Icon Svg={ArrowBottom} width={32} height={32} />}
-                    paddingV={'xs'}
-                >
-                    {selectedItem?.content || defaultItem?.content}
-                </HListBox.Button>
-                <HListBox.Options className={classNames(cls.options, {}, optionsClasses)}>
-                    {items?.map((item, index) => (
-                        <HListBox.Option
-                            key={index}
-                            value={item.value}
-                            disabled={item.disabled}
-                            as={Fragment}
-                        >
-                            {({ active }) => (
-                                <li
-                                    className={classNames(
-                                        cls.item,
-                                        {
-                                            [popupCls.active]: active ?? false,
-                                            [popupCls.disabled]: item.disabled ?? false
-                                        },
-                                        []
-                                    )}
-                                >
-                                    {item.content}
-                                </li>
-                            )}
-                        </HListBox.Option>
-                    ))}
-                </HListBox.Options>
-            </HListBox>
-        </HStack>
+                {selectedItem?.content || defaultItem?.content}
+            </HListBox.Button>
+            <HListBox.Options className={classNames(cls.options, {}, optionsClasses)}>
+                {items?.map((item, index) => (
+                    <HListBox.Option
+                        key={index}
+                        value={item.value}
+                        disabled={item.disabled}
+                        as={Fragment}
+                    >
+                        {({ active }) => (
+                            <li
+                                className={classNames(
+                                    cls.item,
+                                    {
+                                        [popupCls.active]: active ?? false,
+                                        [popupCls.disabled]: item.disabled ?? false
+                                    },
+                                    []
+                                )}
+                            >
+                                {item.content}
+                            </li>
+                        )}
+                    </HListBox.Option>
+                ))}
+            </HListBox.Options>
+        </HListBox>
     )
 }

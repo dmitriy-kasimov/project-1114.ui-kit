@@ -15,5 +15,4 @@ export interface ListBoxProps<T = string> {
     onChange: (value: T) => void
     readonly?: boolean
     direction?: DropdownDirection
-    label?: string
 }
