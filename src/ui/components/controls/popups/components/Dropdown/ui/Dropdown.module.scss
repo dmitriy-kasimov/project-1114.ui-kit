@@ -5,7 +5,8 @@
 .menu {
     background: var(--color-main);
     position: absolute;
-    z-index: var(--uikit-controls-menu-z-index);
+
+    // z-index: var(--uikit-controls-menu-z-index);
     border-radius: var(--uikit-border-radius-s);
     flex-direction: column;
     display: flex;

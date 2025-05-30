@@ -27,9 +27,6 @@ export function ListBox<T = string>(props: ListBoxProps<T>) {
 
     const defaultItem = items?.find(item => item.value === defaultValue)
 
-    console.log(`[PLATFORM] | [ui-kit] | selectedItem.value = ${selectedItem?.value}`)
-    console.log(`[PLATFORM] | [ui-kit] | getDefaultValue.value = ${defaultItem?.value}`)
-
     return (
         <HListBox
             disabled={readonly}

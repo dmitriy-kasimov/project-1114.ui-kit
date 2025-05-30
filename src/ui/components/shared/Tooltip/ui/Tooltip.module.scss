@@ -10,32 +10,32 @@
         border-radius: var(--uikit-border-radius-s);
         padding: var(--uikit-indent-s);
         background: var(--color-accent);
-        z-index: 1000;
+        z-index: 1;
         animation: show 0.3s backwards;
     }
 
     .bottom-right {
         right: 0;
         bottom: 100%;
-        box-shadow: 2px 2px 8px var(--color-secondary);
+        box-shadow: 2px 2px 8px var(--color-main);
     }
 
     .top-right {
         top: 100%;
         right: 0;
-        box-shadow: 2px -2px 8px var(--color-secondary);
+        box-shadow: 2px -2px 8px var(--color-main);
     }
 
     .bottom-left {
         bottom: 100%;
         left: 0;
-        box-shadow: -2px 2px 8px var(--color-secondary);
+        box-shadow: -2px 2px 8px var(--color-main);
     }
 
     .top-left {
         top: 100%;
         left: 0;
-        box-shadow: -2px -2px 8px var(--color-secondary);
+        box-shadow: -2px -2px 8px var(--color-main);
     }
 }
 

@@ -1,7 +1,8 @@
 .panel {
     background: var(--color-main);
     position: absolute;
-    z-index: var(--uikit-controls-menu-z-index);
+
+    // z-index: var(--uikit-controls-menu-z-index);
     border-radius: var(--uikit-border-radius-s);
     padding: var(--uikit-indent-s);
     box-shadow: 2px 2px 8px var(--color-secondary);
