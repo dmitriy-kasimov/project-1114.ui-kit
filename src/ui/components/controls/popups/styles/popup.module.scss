@@ -1,5 +1,6 @@
 .popup {
     position: relative;
+    z-index: var(--uikit-utils-popup-z-index);
 }
 
 .active {
