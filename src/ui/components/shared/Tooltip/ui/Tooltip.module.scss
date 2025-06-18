@@ -17,25 +17,25 @@
     .bottom-right {
         right: 0;
         bottom: 100%;
-        box-shadow: 2px 2px 8px var(--color-main);
+        box-shadow: 2px 2px 8px black;
     }
 
     .top-right {
         top: 100%;
         right: 0;
-        box-shadow: 2px -2px 8px var(--color-main);
+        box-shadow: 2px -2px 8px black;
     }
 
     .bottom-left {
         bottom: 100%;
         left: 0;
-        box-shadow: -2px 2px 8px var(--color-main);
+        box-shadow: -2px 2px 8px black;
     }
 
     .top-left {
         top: 100%;
         left: 0;
-        box-shadow: -2px -2px 8px var(--color-main);
+        box-shadow: -2px -2px 8px black;
     }
 }
 
