@@ -12,6 +12,7 @@ export { Slider } from './ui/components/controls/inputs/Slider'
 export { Switcher } from './ui/components/controls/inputs/Switcher'
 export { TextArea } from './ui/components/controls/inputs/TextArea'
 export { TextField } from './ui/components/controls/inputs/TextField'
+export { TextFieldPassword } from './ui/components/controls/inputs/TextFieldPassword'
 
 export { Link } from './ui/components/controls/links/Link/index'
 

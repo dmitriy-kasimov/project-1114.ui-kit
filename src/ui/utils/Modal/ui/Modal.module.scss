@@ -18,6 +18,7 @@
     background: var(--color-main);
     border-radius: var(--uikit-border-radius-s);
     z-index: var(--uikit-utils-modal-z-index);
+    overflow: hidden;
 }
 
 .padding-0 {
