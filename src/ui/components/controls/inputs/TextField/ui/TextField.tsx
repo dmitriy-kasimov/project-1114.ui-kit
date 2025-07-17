@@ -36,7 +36,7 @@ export const TextField: FC<TextFieldProps> = memo(props => {
             <input
                 value={value}
                 disabled={disabled}
-                onChange={e => onChange?.(e.target.value)}
+                onChange={onChange}
                 className={cls.input}
                 placeholder={placeholder}
                 {...otherProps}
@@ -47,7 +47,7 @@ export const TextField: FC<TextFieldProps> = memo(props => {
 
     if (validationMessage)
         return (
-            <VStack gap={'xxs'}>
+            <VStack gap={'xxs'} className={classNames('', { [cls.fullWidth!]: fullWidth }, [])}>
                 {textField}
                 <Text size={'s'} color={'error'} whiteSpace={'wrap'}>
                     {validationMessage}

@@ -1,9 +1,9 @@
-import { InputHTMLAttributes, ReactNode } from 'react'
+import { ChangeEvent, InputHTMLAttributes, ReactNode } from 'react'
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
 export interface TextFieldProps extends HTMLInputProps {
     value?: string
-    onChange?: (value: string) => void
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void
 
     validationMessage?: string
 
