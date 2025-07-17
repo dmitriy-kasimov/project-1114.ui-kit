@@ -5,6 +5,8 @@ export interface TextFieldProps extends HTMLInputProps {
     value?: string
     onChange?: (value: string) => void
 
+    validationMessage?: string
+
     placeholder?: string
 
     disabled?: boolean

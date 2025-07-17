@@ -27,6 +27,13 @@ export const Default: Story = {
     }
 }
 
+export const WithValidationMessage: Story = {
+    args: {
+        placeholder: 'Placeholder',
+        validationMessage: '*wrong data'
+    }
+}
+
 export const WithLeftAddon: Story = {
     args: {
         placeholder: 'Suus',

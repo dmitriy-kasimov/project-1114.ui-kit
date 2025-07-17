@@ -3,7 +3,8 @@ import React, { FC, memo } from 'react'
 import cls from './TextField.module.scss'
 import { TextFieldProps } from '../model/types/index'
 import { Mods, classNames } from 'lib/classNames/classNames'
-import { HStack } from 'ui/components/shared/Stack'
+import { HStack, VStack } from 'ui/components/shared/Stack'
+import { Text } from 'ui/components/shared/Text'
 
 export const TextField: FC<TextFieldProps> = memo(props => {
     const {
@@ -19,6 +20,7 @@ export const TextField: FC<TextFieldProps> = memo(props => {
 
         className,
         fullWidth = false,
+        validationMessage,
         ...otherProps
     } = props
 
@@ -28,7 +30,7 @@ export const TextField: FC<TextFieldProps> = memo(props => {
         [cls.readonly!]: readOnly
     }
 
-    return (
+    const textField = (
         <HStack gap={'xs'} className={classNames(cls.wrapper, mods, [className])}>
             {addonLeft}
             <input
@@ -42,4 +44,16 @@ export const TextField: FC<TextFieldProps> = memo(props => {
             {addonRight}
         </HStack>
     )
+
+    if (validationMessage)
+        return (
+            <VStack gap={'xxs'}>
+                {textField}
+                <Text size={'s'} color={'error'} whiteSpace={'wrap'}>
+                    {validationMessage}
+                </Text>
+            </VStack>
+        )
+
+    return textField
 })
