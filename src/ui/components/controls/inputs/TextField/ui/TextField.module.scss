@@ -10,11 +10,6 @@
 .wrapper {
     cursor: pointer;
     background: var(--color-accent);
-
-    &:hover {
-        opacity: 0.95;
-    }
-
     padding: 0.25rem;
     border-radius: var(--uikit-border-radius-s);
 
@@ -33,5 +28,11 @@
     .input::placeholder {
         color: var(--color-secondary);
         opacity: 0.55;
+    }
+}
+
+.wrapper:not(.disabled) {
+    &:hover {
+        opacity: 0.95;
     }
 }

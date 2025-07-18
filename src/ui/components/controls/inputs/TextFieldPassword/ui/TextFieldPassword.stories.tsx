@@ -23,3 +23,10 @@ export const Default: Story = {
         placeholder: 'Placeholder'
     }
 }
+
+export const Disbaled: Story = {
+    args: {
+        placeholder: 'Placeholder',
+        disabled: true
+    }
+}

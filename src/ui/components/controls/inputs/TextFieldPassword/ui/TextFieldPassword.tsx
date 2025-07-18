@@ -5,25 +5,29 @@ import { Icon } from 'ui/components/shared/Icon'
 import MaskText from 'styles/assets/icons/maskText.svg'
 import UnmaskText from 'styles/assets/icons/unmaskText.svg'
 
-export const TextFieldPassword: FC<TextFieldProps> = memo(({ value, onChange, ...props }) => {
-    const [hide, setHide] = useState(false)
+export const TextFieldPassword: FC<TextFieldProps> = memo(
+    ({ value, onChange, disabled, ...props }) => {
+        const [hide, setHide] = useState(false)
 
-    return (
-        <TextField
-            value={value}
-            onChange={onChange}
-            type={hide ? 'password' : props.type}
-            addonRight={
-                <Icon
-                    Svg={hide ? MaskText : UnmaskText}
-                    clickable
-                    onClick={() => setHide(prev => !prev)}
-                    fill={'var(--color-secondary)'}
-                    width={24}
-                    height={24}
-                />
-            }
-            {...props}
-        />
-    )
-})
+        return (
+            <TextField
+                value={value}
+                onChange={onChange}
+                disabled={disabled}
+                type={hide ? 'password' : props.type}
+                addonRight={
+                    <Icon
+                        disabled={disabled}
+                        Svg={hide ? MaskText : UnmaskText}
+                        clickable
+                        onClick={() => setHide(prev => !prev)}
+                        fill={'var(--color-secondary)'}
+                        width={24}
+                        height={24}
+                    />
+                }
+                {...props}
+            />
+        )
+    }
+)
